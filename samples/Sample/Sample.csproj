@@ -29,16 +29,24 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
-    <EmbeddedResource Include="SamplePage.xaml" />
+    <EmbeddedResource Include="SampleGradientPage.xaml" />
+    <EmbeddedResource Include="BoostedStackExamplePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SamplePage.xaml.cs">
-      <DependentUpon>SamplePage.xaml</DependentUpon>
+    <Compile Include="SampleGradientPage..xaml.cs">
+      <DependentUpon>SampleGradientPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BoostedStackExamplePage.xaml.cs">
+      <DependentUpon>BoostedStackExamplePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BoostedStackExampleViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

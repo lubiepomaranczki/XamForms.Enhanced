@@ -8,7 +8,7 @@ namespace Sample
         {
             InitializeComponent();
 
-            MainPage = new SamplePage();
+            MainPage = new NavigationPage(new SampleGradientPage());
         }
 
         protected override void OnStart()

@@ -3,10 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:Sample" 
     xmlns:controls="clr-namespace:XamForms.EnhancedControls.Views;assembly=XamForms.EnhancedControls"
-    x:Class="Sample.SamplePage"
+    x:Class="Sample.SampleGradientPage"
     Title="Sample">
     <Grid RowSpacing="0">
         <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -16,5 +17,7 @@
         <Label Grid.Row="0" Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
         <controls:GradientView Grid.Row="1" StartColor="#ffffff" EndColor="#ff0000" Orientation="Horizontal"/>
         <controls:GradientView Grid.Row="2" StartColor="#00ff00" EndColor="#0000ff" Orientation="Vertical"/>
+        <controls:GradientView Grid.Row="3" StartColor="#00ff00" EndColor="#0000ff" Orientation="Vertical"/>
+        <Button Grid.Row="4" Clicked="Handle_Clicked" Text="Click to navigate" BackgroundColor="Fuchsia"/>
     </Grid>
 </ContentPage>
