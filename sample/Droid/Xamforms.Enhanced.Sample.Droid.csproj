@@ -129,17 +129,13 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Xamforms.Enhanced.Sample\Xamforms.Enhanced.Sample.csproj">
-      <Project>{3D41F04D-6023-486B-97E2-630ABB3B42B9}</Project>
-      <Name>Xamforms.Enhanced.Sample</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Droid\XamForms.Enhanced.Droid.csproj">
       <Project>{D92B32B9-4352-4E2C-8B66-7F4AF090A168}</Project>
       <Name>XamForms.Enhanced.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\XamForms.Enhanced\XamForms.Enhanced.csproj">
-      <Project>{D295F13C-9773-4892-A74D-B8219D135125}</Project>
-      <Name>XamForms.Enhanced</Name>
+    <ProjectReference Include="..\Xamforms.Enhanced.Sample.Abs\Xamforms.Enhanced.Sample.csproj">
+      <Project>{B65056CE-A351-44B6-A86A-5BEFD4DD2BB4}</Project>
+      <Name>Xamforms.Enhanced.Sample</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

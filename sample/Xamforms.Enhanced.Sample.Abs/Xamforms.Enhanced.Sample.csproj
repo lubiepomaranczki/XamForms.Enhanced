@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\SampleExtendedListViewPage.xaml" />
+    <None Remove="Views\SampleExtendedStackPage.xaml" />
+    <None Remove="Views\SampleGradientPage.xaml" />
+  </ItemGroup>  
+  <ItemGroup>
+    <Compile Update="Views\SampleExtendedListViewPage.xaml.cs">
+      <DependentUpon>..\..\Xamforms.Enhanced.Sample\Views\SampleExtendedListViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SampleExtendedStackPage.xaml.cs">
+      <DependentUpon>..\..\Xamforms.Enhanced.Sample\Views\SampleExtendedStackPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\SampleGradientPage.xaml.cs">
+      <DependentUpon>..\..\Xamforms.Enhanced.Sample\Views\SampleGradientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\XamForms.Enhanced.Abstractions\XamForms.Enhanced.csproj" />
+  </ItemGroup>
+</Project>

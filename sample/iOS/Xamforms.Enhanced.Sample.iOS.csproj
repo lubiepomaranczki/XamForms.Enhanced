@@ -118,17 +118,13 @@
     <Compile Include="AppDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Xamforms.Enhanced.Sample\Xamforms.Enhanced.Sample.csproj">
-      <Project>{3D41F04D-6023-486B-97E2-630ABB3B42B9}</Project>
-      <Name>Xamforms.Enhanced.Sample</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\iOS\XamForms.Enhanced.iOS.csproj">
       <Project>{6F98F4E2-FAD9-4361-BD17-226A6388B511}</Project>
       <Name>XamForms.Enhanced.iOS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\XamForms.Enhanced\XamForms.Enhanced.csproj">
-      <Project>{D295F13C-9773-4892-A74D-B8219D135125}</Project>
-      <Name>XamForms.Enhanced</Name>
+    <ProjectReference Include="..\Xamforms.Enhanced.Sample.Abs\Xamforms.Enhanced.Sample.csproj">
+      <Project>{B65056CE-A351-44B6-A86A-5BEFD4DD2BB4}</Project>
+      <Name>Xamforms.Enhanced.Sample</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

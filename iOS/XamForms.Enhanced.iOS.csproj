@@ -96,12 +96,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamForms.Enhanced\XamForms.Enhanced.csproj">
-      <Project>{D295F13C-9773-4892-A74D-B8219D135125}</Project>
-      <Name>XamForms.Enhanced</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
   </ItemGroup>
@@ -114,6 +108,12 @@
     <Compile Include="EnhancedControls.cs" />
     <Compile Include="Renderers\GradientViewRenderer.cs" />
     <Compile Include="Extensions\ColorExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XamForms.Enhanced.Abstractions\XamForms.Enhanced.csproj">
+      <Project>{DE06395D-0914-4974-A48B-4725C65E619E}</Project>
+      <Name>XamForms.Enhanced</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.121934\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.121934\build\netstandard1.0\Xamarin.Forms.targets')" />
