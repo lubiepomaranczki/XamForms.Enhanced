@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>XamForms.Enhanced</string>
+	<string>Xamforms.Enhanced.Sample</string>
 	<key>CFBundleName</key>
-	<string>XamForms.Enhanced</string>
+	<string>Xamforms.Enhanced.Sample</string>
 	<key>CFBundleIdentifier</key>
-	<string>pl.llawicki.xamforms.enhanced.XamForms-Enhanced</string>
+	<string>pl.llawicki.xamforms.enhanced.sample.Xamforms-Enhanced-Sample</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:views="clr-namespace:XamForms.Enhanced.Views;assembly=XamForms.Enhanced"
+    x:Class="Xamforms.Enhanced.Sample.Views.SampleExtendedStackPage"
+    Title="{Binding Title}">
+	<ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <views:ExtendedStackLayout Grid.Row="0" Clicked="Handle_Clicked" Margin="2" BackgroundColor="Aqua">
+                <Label Text="Click me to go back"/>
+            </views:ExtendedStackLayout>
+            <views:ExtendedStackLayout Grid.Row="1" TappedCommand="{Binding DoNothingCmd}" BackgroundColor="Fuchsia">
+                <Label Text="Click me to execute DoNothingCommand"/>
+            </views:ExtendedStackLayout>
+        </Grid>
+	</ContentPage.Content>
+</ContentPage>

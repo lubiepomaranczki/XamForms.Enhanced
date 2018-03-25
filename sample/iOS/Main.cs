@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace XamForms.Enhanced.iOS
+namespace Xamforms.Enhanced.Sample.iOS
 {
     public class Application
     {

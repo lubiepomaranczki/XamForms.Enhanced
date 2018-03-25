@@ -8,9 +8,10 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace XamForms.Enhanced.Droid
+
+namespace Xamforms.Enhanced.Sample.Droid
 {
-    [Activity(Label = "XamForms.Enhanced.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Xamforms.Enhanced.Sample.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -20,6 +21,7 @@ namespace XamForms.Enhanced.Droid
 
             base.OnCreate(bundle);
 
+			XamForms.Enhanced.Droid.EnhancedControls.Init();
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());

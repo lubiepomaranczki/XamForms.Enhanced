@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Sample" 
+    xmlns:views="clr-namespace:XamForms.Enhanced.Views;assembly=XamForms.Enhanced"
+    x:Class="Xamforms.Enhanced.Sample.Views.SampleGradientPage"
+    Title="Sample">
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <views:GradientView Grid.Row="0" StartColor="#00ff00" EndColor="#0000ff"/>
+        <Label Grid.Row="0" Text="Default orientation = horizontal" VerticalOptions="Center" HorizontalOptions="Center" />
+        <views:GradientView Grid.Row="1" StartColor="#00ff00" EndColor="#0000ff" Orientation="Vertical"/>
+        <Label Grid.Row="1" Text="Vertical orientation" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Button Grid.Row="2" Clicked="Handle_Clicked" Text="Click to navigate" BackgroundColor="Fuchsia"/>
+    </Grid>
+</ContentPage>

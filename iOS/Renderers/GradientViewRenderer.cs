@@ -4,9 +4,10 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using XamForms.EnhancedControls.iOS.Extensions;
+using XamForms.Enhanced.Views;
 
-[assembly: ExportRenderer(typeof(XamForms.EnhancedControls.Views.GradientView), typeof(XamForms.EnhancedControls.iOS.Renderers.GradientViewRenderer))]
-namespace XamForms.EnhancedControls.iOS.Renderers
+[assembly: ExportRenderer(typeof(GradientView), typeof(XamForms.Enhanced.iOS.Renderers.GradientViewRenderer))]
+namespace XamForms.Enhanced.iOS.Renderers
 {
     public class GradientViewRenderer : ViewRenderer
     {

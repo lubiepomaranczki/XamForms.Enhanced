@@ -5,13 +5,14 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace XamForms.Enhanced.iOS
+namespace Xamforms.Enhanced.Sample.iOS
 {
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            XamForms.EnhancedControls.iOS.EnhancedControls.Init();
             global::Xamarin.Forms.Forms.Init();
 
             LoadApplication(new App());

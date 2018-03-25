@@ -1,10 +1,9 @@
-﻿namespace XamForms.EnhancedControls.Droid
+﻿namespace XamForms.Enhanced.Droid
 {
     public static class EnhancedControls
     {
         public static void Init()
         {
-            var d = "";
         }
     }
 }

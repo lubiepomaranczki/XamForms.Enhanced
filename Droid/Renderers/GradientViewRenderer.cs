@@ -2,7 +2,7 @@
 using Android.Graphics.Drawables;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using XamForms.EnhancedControls.Views;
+using XamForms.Enhanced.Views;
 
 [assembly: ExportRenderer(typeof(GradientView), typeof(XamForms.EnhancedControls.Droid.Renderers.GradientViewRenderer))]
 namespace XamForms.EnhancedControls.Droid.Renderers
