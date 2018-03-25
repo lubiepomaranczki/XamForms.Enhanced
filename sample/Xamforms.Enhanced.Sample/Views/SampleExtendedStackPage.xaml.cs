@@ -12,7 +12,7 @@ namespace Xamforms.Enhanced.Sample.Views
 
         private void Handle_Clicked(object sender, System.EventArgs e)
         {
-            Navigation?.PopAsync();
+            Navigation?.PushAsync(new SampleExtendedListViewPage());
         }
     }
 }

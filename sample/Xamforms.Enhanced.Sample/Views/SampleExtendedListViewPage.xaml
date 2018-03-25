@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Xamforms.Enhanced.Sample.Views.SampleExtendedListViewPage"
+    xmlns:views="clr-namespace:XamForms.Enhanced.Views;assembly=XamForms.Enhanced"
+    Title="{Binding Title}">
+	<ContentPage.Content>
+            <views:ExtendedListView 
+                ItemsSource="{Binding ListOfTodos}" 
+                ItemSelectedCommand="{Binding TodoSelectedCmd}" 
+                IsRefreshing="{Binding IsBusy}"
+                ShouldHiglightSelected="false"
+                HasUnevenRows="false" 
+                IsGroupingEnabled="false"
+                SeparatorVisibility="None"
+                RowHeight="88">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--Todo cell-->
+                            <Grid Margin="16,8,13,0" RowSpacing="0" VerticalOptions="FillAndExpand" BackgroundColor="Navy">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Text="{Binding Name}" TextColor="#ffffff"/>
+                                <Label Grid.Row="1" Text="{Binding Description}" TextColor="#ffffff"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </views:ExtendedListView>
+	</ContentPage.Content>
+</ContentPage>

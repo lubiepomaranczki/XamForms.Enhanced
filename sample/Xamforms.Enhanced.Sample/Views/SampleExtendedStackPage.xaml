@@ -11,7 +11,7 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <views:ExtendedStackLayout Grid.Row="0" Clicked="Handle_Clicked" Margin="2" BackgroundColor="Aqua">
-                <Label Text="Click me to go back"/>
+                <Label Text="Click me to go to the list sample!"/>
             </views:ExtendedStackLayout>
             <views:ExtendedStackLayout Grid.Row="1" TappedCommand="{Binding DoNothingCmd}" BackgroundColor="Fuchsia">
                 <Label Text="Click me to execute DoNothingCommand"/>

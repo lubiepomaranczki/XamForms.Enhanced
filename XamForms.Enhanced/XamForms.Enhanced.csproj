@@ -42,6 +42,8 @@
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="Views\ExtendedStackLayout.cs" />
     <Compile Include="Views\GradientView.cs" />
+    <Compile Include="Views\ExtendedListView.cs" />
+    <Compile Include="Views\ExtendedToolbarItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
