@@ -5,10 +5,13 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using XamForms.EnhancedControls.iOS.Extensions;
 using XamForms.Enhanced.Views;
+using Foundation;
+using XamForms.Enhanced.iOS.Renderers;
 
-[assembly: ExportRenderer(typeof(GradientView), typeof(XamForms.Enhanced.iOS.Renderers.GradientViewRenderer))]
+[assembly: ExportRenderer(typeof(GradientView), typeof(GradientViewRenderer))]
 namespace XamForms.Enhanced.iOS.Renderers
 {
+    [Preserve(AllMembers = true)]
     public class GradientViewRenderer : ViewRenderer
     {
         protected override void OnElementChanged(ElementChangedEventArgs<View> e)
@@ -26,7 +29,7 @@ namespace XamForms.Enhanced.iOS.Renderers
         {
             base.LayoutSubviews();
 
-            if (!(Element is Views.GradientView gradientView))
+            if (!(Element is GradientView gradientView))
             {
                 return;
             }
