@@ -119,7 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\iOS\XamForms.Enhanced.iOS.csproj">
-      <Project>{6F98F4E2-FAD9-4361-BD17-226A6388B511}</Project>
+      <Project>{DD816F54-06E9-463E-BDC0-500A9BB409B6}</Project>
       <Name>XamForms.Enhanced.iOS</Name>
     </ProjectReference>
     <ProjectReference Include="..\Xamforms.Enhanced.Sample.Abs\Xamforms.Enhanced.Sample.csproj">

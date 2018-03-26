@@ -8,7 +8,7 @@
        <owners>Lukasz Lawicki</owners>
        <licenseUrl>https://github.com/lubiepomaranczki/XamForms.Enhanced/blob/master/LICENSE</licenseUrl>
        <projectUrl>https://github.com/lubiepomaranczki/XamForms.Enhanced</projectUrl>
-      <iconUrl>https://upload.wikimedia.org/wikipedia/en/e/ee/Roadrunner_looney_tunes.png</iconUrl>
+       <iconUrl>https://github.com/lubiepomaranczki/XamForms.Enhanced/blob/master/icon.png</iconUrl>
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>
 	   Version 1.0.0 or above Built against: 2.5.0.121934
@@ -19,7 +19,7 @@
          <dependency id="Xamarin.Forms" version="2.5.0.121934" />
        </dependencies>
        <releaseNotes>
-	 [1.0.0]
+	[1.0.0]
 	Init release with:
 	 - BaseViewModel,
 	 - ExtendedListView,
@@ -30,14 +30,14 @@
    </metadata>
    <files>
       <!--Core-->
-     <file src="XamForms.Enhanced.Abstractions/bin/Release/XamForms.Enhanced.dll" target="lib/netstandard2.0/XamForms.Enhanced.dll" />
+     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard2.0/XamForms.Enhanced.dll" target="lib/netstandard2.0/XamForms.Enhanced.dll" />
      	 
      <!--Xamarin.Android-->
-     <file src="XamForms.Enhanced.Droid/bin/Release/XamForms.Enhanced.Droid.dll" target="lib/MonoAndroid10/XamForms.Enhanced.Droid.dll" />
-     <file src="XamForms.Enhanced.Abstractions/bin/Release/XamForms.Enhanced.dll" target="lib/MonoAndroid10/XamForms.Enhanced.dll" />
+     <file src="Droid/bin/Release/XamForms.Enhanced.Droid.dll" target="lib/MonoAndroid10/XamForms.Enhanced.Droid.dll" />
+     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard2.0/XamForms.Enhanced.dll" target="lib/netstandard2.0/XamForms.Enhanced.dll" />
 	 
      <!--Xamarin.iOS-->
-     <file src="XamForms.Enhanced.iOS/bin/Release/XamForms.Enhanced.iOS.dll" target="lib/Xamarin.iOS10/XamForms.Enhanced.iOS.dll" />
-     <file src="XamForms.Enhanced.Abstractions/bin/Release/XamForms.Enhanced.dll" target="lib/Xamarin.iOS10/XamForms.Enhanced.dll" />
+     <file src="iOS/bin/Release/XamForms.Enhanced.iOS.dll" target="lib/Xamarin.iOS10/XamForms.Enhanced.iOS.dll" />
+     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard2.0/XamForms.Enhanced.dll" target="lib/netstandard2.0/XamForms.Enhanced.dll" />
    </files>
 </package>
