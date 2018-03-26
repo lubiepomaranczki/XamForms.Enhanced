@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using XamForms.Enhanced.Shared;
+using XamForms.Events.Shared;
 
 namespace XamForms.Enhanced.Observable
 {

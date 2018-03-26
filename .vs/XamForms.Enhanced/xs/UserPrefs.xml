@@ -1,15 +1,13 @@
 ﻿<Properties StartupConfiguration="{D06416BB-5CD7-4078-8598-EDB1EBB14B96}|Default">
   <MonoDevelop.Ide.ItemProperties.sample.Xamforms.Enhanced.Sample.Droid PreferredExecutionTarget="Android.040fcc72028a4b12" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamForms.Enhanced.Tests/Observable/ObservablePropertyComplexObjectTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XamForms.Enhanced.Tests/Observable/ObservablePropertyValueTypesTest.cs">
     <Files>
-      <File FileName="XamForms.Enhanced.Tests/Observable/ObservablePropertyValueTypesTest.cs" Line="98" Column="54" />
-      <File FileName="XamForms.Enhanced.Tests/Observable/ObservablePropertyStringTest.cs" Line="45" Column="59" />
-      <File FileName="XamForms.Enhanced.Tests/Observable/ObservablePropertyComplexObjectTest.cs" Line="45" Column="49" />
+      <File FileName="XamForms.Enhanced.Tests/Observable/ObservablePropertyValueTypesTest.cs" Line="89" Column="54" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="XamForms.Enhanced" selected="True" />
+          <Node name="XamForms.Enhanced" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

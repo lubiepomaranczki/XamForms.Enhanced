@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using XamForms.Enhanced.Observable;
-using XamForms.Enhanced.Shared;
+using XamForms.Events.Shared;
 
 namespace Restauranter.Tests.Rx
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace XamForms.Enhanced.Shared
+namespace XamForms.Events.Shared
 {
     public class DataEventArgs : EventArgs
     {

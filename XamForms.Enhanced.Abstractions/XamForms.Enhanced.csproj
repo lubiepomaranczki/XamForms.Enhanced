@@ -8,7 +8,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
     <Folder Include="Observable\" />
-    <Folder Include="Shared\" />
+    <Folder Include="Events\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
