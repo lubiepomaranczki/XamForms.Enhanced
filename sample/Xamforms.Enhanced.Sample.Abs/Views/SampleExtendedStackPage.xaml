@@ -7,14 +7,18 @@
 	<ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <views:ExtendedStackLayout Grid.Row="0" Clicked="Handle_Clicked" Margin="2" BackgroundColor="Aqua">
+            <Label Grid.Row="0" Text="{Binding Model.Name.Value}"/>
+            <Label Grid.Row="1" Text="{Binding Model.Text.Value}"/>
+            <views:ExtendedStackLayout Grid.Row="2" Clicked="Handle_Clicked" Margin="2" BackgroundColor="Aqua">
                 <Label Text="Click me to go to the list sample!"/>
             </views:ExtendedStackLayout>
-            <views:ExtendedStackLayout Grid.Row="1" TappedCommand="{Binding DoNothingCmd}" BackgroundColor="Fuchsia">
-                <Label Text="Click me to execute DoNothingCommand"/>
+            <views:ExtendedStackLayout Grid.Row="3" TappedCommand="{Binding DoNothingCmd}" BackgroundColor="Fuchsia">
+                <Label Text="Click me to change Name"/>
             </views:ExtendedStackLayout>
         </Grid>
 	</ContentPage.Content>
