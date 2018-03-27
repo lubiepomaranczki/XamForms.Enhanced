@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
    <metadata minClientVersion="2.8.1">
        <id>XamForms.Enhanced</id>
-       <version>1.0.2</version>
+       <version>1.0.1</version>
        <title>Custom controls and extensions for Xamarin.Forms</title>
        <authors>Lukasz Lawicki</authors>
        <owners>Lukasz Lawicki</owners>
@@ -11,7 +11,7 @@
        <iconUrl>https://raw.githubusercontent.com/lubiepomaranczki/XamForms.Enhanced/master/icon.png</iconUrl>
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>
-	   Version 1.0.2 or above Built against: 2.5.0.121934
+	   Version 1.0.1 or above Built against: 2.5.0.121934
        </description>
        <summary>XamForms.Enhanced is my set of custom properties/other things which I use across most of my projects</summary>
        <tags>xamarin, pcl, xam.pcl, android, xamarin.forms, ios, MVVM, controls</tags>
