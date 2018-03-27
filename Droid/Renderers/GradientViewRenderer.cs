@@ -1,5 +1,6 @@
 ﻿using Android.Content;
 using Android.Graphics.Drawables;
+using Android.Runtime;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using XamForms.Enhanced.Views;
@@ -7,6 +8,7 @@ using XamForms.Enhanced.Views;
 [assembly: ExportRenderer(typeof(GradientView), typeof(XamForms.EnhancedControls.Droid.Renderers.GradientViewRenderer))]
 namespace XamForms.EnhancedControls.Droid.Renderers
 {
+    [Preserve(AllMembers = true)]
     public class GradientViewRenderer : ViewRenderer
     {
         #region Fields
