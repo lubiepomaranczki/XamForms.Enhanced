@@ -17,7 +17,7 @@
             <views:ExtendedStackLayout Grid.Row="2" Clicked="Handle_Clicked" Margin="2" BackgroundColor="Aqua">
                 <Label Text="Click me to go to the list sample!"/>
             </views:ExtendedStackLayout>
-            <views:ExtendedStackLayout Grid.Row="3" TappedCommand="{Binding DoNothingCmd}" BackgroundColor="Fuchsia">
+            <views:ExtendedStackLayout Grid.Row="3" TappedCommand="{Binding ChangeDateCmd}" BackgroundColor="Fuchsia">
                 <Label Text="Click me to change Name"/>
             </views:ExtendedStackLayout>
         </Grid>

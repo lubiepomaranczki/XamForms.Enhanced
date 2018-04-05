@@ -1,6 +1,9 @@
-﻿using Xamarin.Forms;
-using Xamforms.Enhanced.Sample.Models;
+﻿using Xamforms.Enhanced.Sample.Models;
 using XamForms.Enhanced.ViewModels;
+using XamForms.Enhanced.Commands;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Xamforms.Enhanced.Sample.ViewModels
 {
@@ -9,6 +12,8 @@ namespace Xamforms.Enhanced.Sample.ViewModels
         #region Fields
 
         private ObservableModel model;
+
+        private RelayCommand changeDateCmd;
 
         #endregion
 
@@ -28,9 +33,7 @@ namespace Xamforms.Enhanced.Sample.ViewModels
 
         #region Commands
 
-        private Command doNothingCmd;
-
-        public Command DoNothingCmd => doNothingCmd ?? (doNothingCmd = new Command(DoNothing));
+        public RelayCommand ChangeDateCmd => changeDateCmd ?? (changeDateCmd = new RelayCommand(ChangeDate));
 
         #endregion
 
@@ -47,9 +50,12 @@ namespace Xamforms.Enhanced.Sample.ViewModels
 
         #region Methods
 
-        private void DoNothing(object obj)
+        private async Task ChangeDate(CancellationToken arg)
         {
-            Model.Name.Value = "Date: " + System.DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
+            //Do your API call or whatever you need
+            await Task.Delay(300);
+
+            Model.Name.Value = "Date: " + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
             System.Diagnostics.Debug.WriteLine("I've just changed name");
         }
 

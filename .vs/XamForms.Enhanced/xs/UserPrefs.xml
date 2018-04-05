@@ -1,8 +1,12 @@
 ﻿<Properties StartupConfiguration="{D06416BB-5CD7-4078-8598-EDB1EBB14B96}|Default">
   <MonoDevelop.Ide.ItemProperties.sample.Xamforms.Enhanced.Sample.Droid PreferredExecutionTarget="Android.040fcc72028a4b12" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="XamForms.Enhanced.Tests/Observable/ObservablePropertyValueTypesTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="sample/Xamforms.Enhanced.Sample.Abs/Views/SampleExtendedStackPage.xaml">
     <Files>
-      <File FileName="XamForms.Enhanced.Tests/Observable/ObservablePropertyValueTypesTest.cs" Line="89" Column="54" />
+      <File FileName="sample/iOS/Info.plist" />
+      <File FileName="XamForms.Enhanced.Abstractions/Commands/RelayCommand.cs" Line="105" Column="19" />
+      <File FileName="sample/Xamforms.Enhanced.Sample.Abs/ViewModels/SampleExtendedListViewViewModel.cs" Line="37" Column="50" />
+      <File FileName="sample/Xamforms.Enhanced.Sample.Abs/ViewModels/SampleExtendedStackViewModel.cs" Line="1" Column="1" />
+      <File FileName="sample/Xamforms.Enhanced.Sample.Abs/Views/SampleExtendedStackPage.xaml" Line="20" Column="92" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
@@ -13,11 +17,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.XamForms.Enhanced.Droid PreferredExecutionTarget="Android.040fcc72028a4b12" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.XamForms.Enhanced.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D82516C7-ACE0-4E69-8853-4D5F57493C3B" />
+  <MonoDevelop.Ide.ItemProperties.sample.Xamforms.Enhanced.Sample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D82516C7-ACE0-4E69-8853-4D5F57493C3B" automaticSigning="False" />
 </Properties>
