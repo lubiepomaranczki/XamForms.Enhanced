@@ -4,26 +4,26 @@ using Xamarin.Forms;
 
 namespace XamForms.Enhanced.Views
 {
-    public class ClickableImage : Image
+    public class ExtendedImage : Image
     {
         #region Fields
 
         public static BindableProperty TappedCommandProperty = BindableProperty.Create(
             propertyName: nameof(TappedCommand),
             returnType: typeof(ICommand),
-            declaringType: typeof(ClickableImage),
+            declaringType: typeof(ExtendedImage),
             defaultValue: null);
 
         public static BindableProperty CommandParameterProperty = BindableProperty.Create(
             propertyName: nameof(CommandParameter),
             returnType: typeof(object),
-            declaringType: typeof(ClickableImage),
+            declaringType: typeof(ExtendedImage),
             defaultValue: null);
 
         public static BindableProperty ItemSourceProperty = BindableProperty.Create(
             propertyName: nameof(ItemSource),
             returnType: typeof(object),
-            declaringType: typeof(ClickableImage),
+            declaringType: typeof(ExtendedImage),
             defaultValue: null);
 
         #endregion
@@ -54,7 +54,7 @@ namespace XamForms.Enhanced.Views
 
         #region Constructor(s)
 
-        public ClickableImage()
+        public ExtendedImage()
         {
             var clickGesture = new TapGestureRecognizer();
             clickGesture.Tapped += ClickGesture_Tapped;
