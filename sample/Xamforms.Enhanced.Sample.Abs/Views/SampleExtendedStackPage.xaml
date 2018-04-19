@@ -9,15 +9,17 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Label Grid.Row="0" Text="{Binding Model.Name.Value}"/>
             <Label Grid.Row="1" Text="{Binding Model.Text.Value}"/>
-            <views:ExtendedStackLayout Grid.Row="2" Clicked="Handle_Clicked" Margin="2" BackgroundColor="Aqua">
+            <views:ExtendedImage Grid.Row="2" Source="http://www.clker.com/cliparts/2/5/a/d/12284318241279926958Rolcol_Click_Me.svg.hi.png" TappedCommand="{Binding ChangeDateCmd}" HorizontalOptions="Center"/>
+            <views:ExtendedStackLayout Grid.Row="3" Clicked="Handle_Clicked" Margin="2" BackgroundColor="Aqua">
                 <Label Text="Click me to go to the list sample!"/>
             </views:ExtendedStackLayout>
-            <views:ExtendedStackLayout Grid.Row="3" TappedCommand="{Binding ChangeDateCmd}" BackgroundColor="Fuchsia">
+            <views:ExtendedStackLayout Grid.Row="4" TappedCommand="{Binding ChangeDateCmd}" BackgroundColor="Fuchsia">
                 <Label Text="Click me to change Name"/>
             </views:ExtendedStackLayout>
         </Grid>
