@@ -10,20 +10,20 @@ namespace XamForms.Enhanced.Views
         #region Bindable Properties
 
         public static BindableProperty ItemTappedCommandProperty = BindableProperty.Create(
-            propertyName: "ItemTappedCommand",
+            propertyName: nameof(ItemTappedCommand),
             returnType: typeof(ICommand),
             declaringType: typeof(DynamicStackLayout),
             defaultValue: null);
 
         public static readonly BindableProperty ItemsSourceProperty = BindableProperty.Create(
-            propertyName: "ItemsSource",
+            propertyName: nameof(ItemsSource),
             returnType: typeof(IEnumerable),
             declaringType: typeof(DynamicStackLayout),
             defaultValue: default(IEnumerable),
             propertyChanged: ItemSourceChanged);
 
         public static readonly BindableProperty ItemTemplateProperty = BindableProperty.Create(
-            propertyName: "ItemTemplate",
+            propertyName: nameof(ItemTemplate),
             returnType: typeof(DataTemplate),
             declaringType: typeof(DynamicStackLayout),
             defaultValue: default(DataTemplate));
@@ -58,7 +58,7 @@ namespace XamForms.Enhanced.Views
 
         public DynamicStackLayout()
         {
-            this.Spacing = 0;
+            Spacing = 0;
         }
 
         #endregion
