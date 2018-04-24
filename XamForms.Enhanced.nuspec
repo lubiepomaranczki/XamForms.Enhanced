@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
    <metadata minClientVersion="2.8.1">
        <id>XamForms.Enhanced</id>
-       <version>1.2.0</version>
+       <version>1.3.0</version>
        <title>Custom controls and extensions for Xamarin.Forms</title>
        <authors>Lukasz Lawicki</authors>
        <owners>Lukasz Lawicki</owners>
@@ -19,6 +19,9 @@
          <dependency id="Xamarin.Forms" version="2.5.0.121934" />
        </dependencies>
        <releaseNotes>
+	[1.2.0]
+	Added:
+	 - DynamicStackLayout
 	[1.2.0]
 	Added:
 	 - ExtendedImage
