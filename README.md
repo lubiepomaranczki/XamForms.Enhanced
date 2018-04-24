@@ -1,22 +1,22 @@
 # XamForms.Extended
 
-XamForms.Extended is an open-source library created for my development purposes. It is en extension for Xamarin.Forms. Hope you will find it usefull!
+XamForms.Extended is an open-source library created for my development purposes. It is en extension for Xamarin.Forms. Hope you will find it useful!
 
-### Currently suported platforms:
+### Currently supported platforms:
 - Xamarin.iOS
 - Xamarin.Android
 
 ### Setup
 - Install into your PCL/.NET Standard project and Client projects.
-- Nuget **NOT** available
+- Nuget available [here](https://www.nuget.org/packages/XamForms.Enhanced) 
 
 ### iOS
-On iOS, in AppDelegate.cs, before ``Xamarin.Forms.Forms.Init()`` call:
+On iOS, in AppDelegate.cs, after ``Xamarin.Forms.Forms.Init()`` call:
 ```xml
 XamForms.EnhancedControls.iOS.EnhancedControls.Init();
 ```
 ### Android
-On Android, in MainActivity.cs, before ``Xamarin.Forms.Forms.Init()`` call:
+On Android, in MainActivity.cs, after ``Xamarin.Forms.Forms.Init()`` call:
 ```xml
 XamForms.Enhanced.Droid.EnhancedControls.Init();
 ```
@@ -24,7 +24,9 @@ XamForms.Enhanced.Droid.EnhancedControls.Init();
 ### Extended controls
 - ExtendedListView
 - ExtendedStackLayout
+- ExtendedImage
 - GradientView
+- DynamicStackLayout
   
 ### Other features
 - BaseViewModel
