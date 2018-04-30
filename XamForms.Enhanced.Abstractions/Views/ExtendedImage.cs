@@ -20,12 +20,6 @@ namespace XamForms.Enhanced.Views
             declaringType: typeof(ExtendedImage),
             defaultValue: null);
 
-        public static BindableProperty ItemSourceProperty = BindableProperty.Create(
-            propertyName: nameof(ItemSource),
-            returnType: typeof(object),
-            declaringType: typeof(ExtendedImage),
-            defaultValue: null);
-
         #endregion
 
         #region Properties
@@ -40,12 +34,6 @@ namespace XamForms.Enhanced.Views
         {
             get { return GetValue(CommandParameterProperty); }
             set { SetValue(CommandParameterProperty, value); }
-        }
-
-        public object ItemSource
-        {
-            get { return GetValue(ItemSourceProperty); }
-            set { SetValue(ItemSourceProperty, value); }
         }
 
         public event EventHandler Tapped;
