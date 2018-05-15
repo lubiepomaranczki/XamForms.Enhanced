@@ -1,23 +1,24 @@
 ﻿using System;
-using System.Windows.Input;
 using Xamarin.Forms;
+using System.Windows.Input;
+using System.Linq;
 
 namespace XamForms.Enhanced.Views
 {
-    public class ExtendedImage : Image
+    public class ExtendedLabel : Label
     {
         #region Fields
 
         public static BindableProperty TappedCommandProperty = BindableProperty.Create(
             propertyName: nameof(TappedCommand),
             returnType: typeof(ICommand),
-            declaringType: typeof(ExtendedImage),
+            declaringType: typeof(ExtendedLabel),
             defaultValue: null);
 
         public static BindableProperty CommandParameterProperty = BindableProperty.Create(
             propertyName: nameof(CommandParameter),
             returnType: typeof(object),
-            declaringType: typeof(ExtendedImage),
+            declaringType: typeof(ExtendedLabel),
             defaultValue: null);
 
         #endregion
@@ -32,7 +33,7 @@ namespace XamForms.Enhanced.Views
 
         public object CommandParameter
         {
-            get { return GetValue(CommandParameterProperty); }
+            get { return (object)GetValue(CommandParameterProperty); }
             set { SetValue(CommandParameterProperty, value); }
         }
 
@@ -42,11 +43,24 @@ namespace XamForms.Enhanced.Views
 
         #region Constructor(s)
 
-        public ExtendedImage()
+        public ExtendedLabel()
         {
-            var clickGesture = new TapGestureRecognizer();
-            clickGesture.Tapped += ClickGesture_Tapped;
-            GestureRecognizers.Add(clickGesture);
+        }
+
+        #endregion
+
+        #region Overrides
+
+        protected override void OnPropertyChanged(string propertyName = null)
+        {
+            base.OnPropertyChanged(propertyName);
+
+            if (propertyName == TappedCommandProperty.PropertyName || Tapped != null && !GestureRecognizers.Any())
+            {
+                var clickGesture = new TapGestureRecognizer();
+                clickGesture.Tapped += ClickGesture_Tapped;
+                GestureRecognizers.Add(clickGesture);
+            }
         }
 
         #endregion

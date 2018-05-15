@@ -36,16 +36,6 @@ namespace Xamforms.Enhanced.Sample.ViewModels
         private Command<TodoModel> todoSelectedCmd;
         public Command<TodoModel> TodoSelectedCmd => todoSelectedCmd ?? (todoSelectedCmd = new Command<TodoModel>(TodoSelected));
 
-        private void TodoSelected(object obj)
-        {
-            if (!(obj is TodoModel model))
-            {
-                return;
-            }
-
-            System.Diagnostics.Debug.WriteLine(model.Name + " was clicked");
-        }
-
         #endregion
 
         #region Constructor(s)
@@ -71,7 +61,15 @@ namespace Xamforms.Enhanced.Sample.ViewModels
 
         #region Methods
 
+        private void TodoSelected(object obj)
+        {
+            if (!(obj is TodoModel model))
+            {
+                return;
+            }
 
+            System.Diagnostics.Debug.WriteLine(model.Name + " was clicked");
+        }
 
         #endregion       
     }
