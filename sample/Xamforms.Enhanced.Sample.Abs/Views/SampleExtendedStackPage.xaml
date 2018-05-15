@@ -13,7 +13,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Text="{Binding Model.Name.Value}"/>
+            <views:ExtendedLabel Grid.Row="0" Text="{Binding Model.Name.Value}" TappedCommand="{Binding ChangeDateCmd}"/>
             <Label Grid.Row="1" Text="{Binding Model.Text.Value}"/>
             <views:ExtendedImage Grid.Row="2" Source="http://www.clker.com/cliparts/2/5/a/d/12284318241279926958Rolcol_Click_Me.svg.hi.png" TappedCommand="{Binding ChangeDateCmd}" HorizontalOptions="Center"/>
             <views:ExtendedStackLayout Grid.Row="3" Clicked="Handle_Clicked" Margin="2" BackgroundColor="Aqua">
