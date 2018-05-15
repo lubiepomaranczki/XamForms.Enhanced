@@ -11,7 +11,7 @@ namespace Xamforms.Enhanced.Sample.Views
 
         private void Handle_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new SampleExtendedStackPage());
+            Navigation.PushAsync(new SampleExtendedFramePage());
         }
     }
 }
