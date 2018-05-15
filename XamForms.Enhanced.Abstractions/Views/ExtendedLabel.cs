@@ -9,12 +9,6 @@ namespace XamForms.Enhanced.Views
     {
         #region Fields
 
-        public static BindableProperty MaxLinesProperty = BindableProperty.Create(
-            propertyName: nameof(MaxLines),
-            returnType: typeof(int),
-            declaringType: typeof(ExtendedLabel),
-            defaultValue: 0);
-
         public static BindableProperty TappedCommandProperty = BindableProperty.Create(
             propertyName: nameof(TappedCommand),
             returnType: typeof(ICommand),
@@ -30,12 +24,6 @@ namespace XamForms.Enhanced.Views
         #endregion
 
         #region Properties
-
-        public int MaxLines
-        {
-            get { return (int)GetValue(MaxLinesProperty); }
-            set { SetValue(MaxLinesProperty, value); }
-        }
 
         public ICommand TappedCommand
         {
