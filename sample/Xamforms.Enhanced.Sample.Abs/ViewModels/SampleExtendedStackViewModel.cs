@@ -14,6 +14,7 @@ namespace Xamforms.Enhanced.Sample.ViewModels
         private ObservableModel model;
 
         private RelayCommand changeDateCmd;
+        private ParameterRelayCommand<string> changeTextCmd;
 
         #endregion
 
@@ -34,6 +35,8 @@ namespace Xamforms.Enhanced.Sample.ViewModels
         #region Commands
 
         public RelayCommand ChangeDateCmd => changeDateCmd ?? (changeDateCmd = new RelayCommand(ChangeDate));
+
+        public ParameterRelayCommand<string> ChangeTextCmd => changeTextCmd ?? (changeTextCmd = new ParameterRelayCommand<string>(ChangeText));
 
         #endregion
 
@@ -57,6 +60,14 @@ namespace Xamforms.Enhanced.Sample.ViewModels
 
             Model.Name.Value = "Date: " + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
             System.Diagnostics.Debug.WriteLine("I've just changed name");
+        }
+
+        private async Task ChangeText(string text, CancellationToken arg2)
+        {
+            //Do smth which requires async call
+            await Task.Delay(1);
+
+            model.Text.Value = text;
         }
 
         #endregion
