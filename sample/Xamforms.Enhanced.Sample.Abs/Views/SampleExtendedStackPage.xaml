@@ -12,6 +12,7 @@
                 <RowDefinition Height="50" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Label Grid.Row="0" Text="{Binding Model.Name.Value}"/>
             <Label Grid.Row="1" Text="{Binding Model.Text.Value}"/>
@@ -21,6 +22,9 @@
             </views:ExtendedStackLayout>
             <views:ExtendedStackLayout Grid.Row="4" TappedCommand="{Binding ChangeDateCmd}" BackgroundColor="Fuchsia">
                 <Label Text="Click me to change Name"/>
+            </views:ExtendedStackLayout>
+            <views:ExtendedStackLayout Grid.Row="5" TappedCommand="{Binding ChangeTextCmd}" CommandParameter="Test test test" BackgroundColor="Fuchsia">
+                <Label Text="Click me to change text (test x3)"/>
             </views:ExtendedStackLayout>
         </Grid>
 	</ContentPage.Content>
