@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
    <metadata minClientVersion="2.8.1">
        <id>XamForms.Enhanced</id>
-       <version>2.0.3-alpha</version>
+       <version>2.1.0-alpha</version>
        <title>Custom controls and extensions for Xamarin.Forms</title>
        <authors>Lukasz Lawicki</authors>
        <owners>Lukasz Lawicki</owners>
@@ -19,9 +19,10 @@
          <dependency id="Xamarin.Forms" version="2.5.0.121934" />
        </dependencies>
        <releaseNotes>
-
+  [2.1.0-alpha]
+	Added ExtendedEntry
   [2.0.3-alpha]
-	Ech. So ashamed that I missed that check for null... No it should be fixed
+	Ech. So ashamed that I missed that check for null... Now it should be fixed
   [2.0.2-alpha]
 	Added:
 	 - Parameter RelayCommand
