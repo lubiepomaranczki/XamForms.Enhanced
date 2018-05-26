@@ -22,14 +22,23 @@ XamForms.Enhanced.Droid.EnhancedControls.Init();
 ```
 
 ### Extended controls
+- DynamicStackLayout
+- ExtendedEntry
+- ExtendedFrame
+- ExtendedImage
+- ExtendedLabel
 - ExtendedListView
 - ExtendedStackLayout
-- ExtendedImage
+- ExtendedToolbarItem
 - GradientView
-- DynamicStackLayout
   
 ### Other features
 - BaseViewModel
+- RelayCommand
+- InputRelayCommand
+- OutputRelayCommand
+- ToObservable extension for IList
+- ObservableProperty
 
 ### XAML
 
