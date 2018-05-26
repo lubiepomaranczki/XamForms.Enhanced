@@ -19,11 +19,10 @@
          <dependency id="Xamarin.Forms" version="2.5.0.121934" />
        </dependencies>
        <releaseNotes>
-
   [2.1.0-alpha]
 	Added ExtendedEntry
   [2.0.3-alpha]
-	Ech. So ashamed that I missed that check for null... No it should be fixed
+	Ech. So ashamed that I missed that check for null... Now it should be fixed
   [2.0.2-alpha]
 	Added:
 	 - Parameter RelayCommand
