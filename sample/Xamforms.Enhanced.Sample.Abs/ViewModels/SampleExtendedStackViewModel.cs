@@ -14,7 +14,7 @@ namespace Xamforms.Enhanced.Sample.ViewModels
         private ObservableModel model;
 
         private RelayCommand changeDateCmd;
-        private ParameterRelayCommand<string> changeTextCmd;
+        private InputRelayCommand<string> changeTextCmd;
 
         #endregion
 
@@ -36,7 +36,7 @@ namespace Xamforms.Enhanced.Sample.ViewModels
 
         public RelayCommand ChangeDateCmd => changeDateCmd ?? (changeDateCmd = new RelayCommand(ChangeDate));
 
-        public ParameterRelayCommand<string> ChangeTextCmd => changeTextCmd ?? (changeTextCmd = new ParameterRelayCommand<string>(ChangeText));
+        public InputRelayCommand<string> ChangeTextCmd => changeTextCmd ?? (changeTextCmd = new InputRelayCommand<string>(ChangeText));
 
         #endregion
 
