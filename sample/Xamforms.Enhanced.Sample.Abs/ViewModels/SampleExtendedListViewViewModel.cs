@@ -22,10 +22,8 @@ namespace Xamforms.Enhanced.Sample.ViewModels
             get { return listOfTodos; }
             set
             {
-
                 listOfTodos = value;
                 OnPropertyChanged(nameof(ListOfTodos));
-
             }
         }
 

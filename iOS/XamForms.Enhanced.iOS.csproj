@@ -68,6 +68,7 @@
     <Compile Include="EnhancedControls.cs" />
     <Compile Include="Renderers\GradientViewRenderer.cs" />
     <Compile Include="Extensions\ColorExtensions.cs" />
+    <Compile Include="Renderers\ExtendedEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
