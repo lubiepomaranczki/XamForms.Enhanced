@@ -8,7 +8,7 @@ namespace Xamforms.Enhanced.Sample
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.SampleGradientPage());
+            MainPage = new NavigationPage(new Views.SampleExtendedEntryPage());
         }
 
         protected override void OnStart()

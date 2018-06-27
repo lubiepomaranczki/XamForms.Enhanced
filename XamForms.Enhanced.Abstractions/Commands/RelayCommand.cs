@@ -29,28 +29,6 @@ namespace XamForms.Enhanced.Commands
         #endregion
     }
 
-    /// <summary>
-    /// Represents a parameterless command.
-    /// </summary>
-    /// <typeparam name="TEventArgs">Command output parameter type.</typeparam>
-    public class RelayCommand<TEventArgs> : RelayCommand<object, TEventArgs>
-    {
-        #region Constructor(s)
-
-        public RelayCommand(Func<CancellationToken, Task<TEventArgs>> action)
-            : this(action, null)
-        {
-        }
-
-        public RelayCommand(Func<CancellationToken, Task<TEventArgs>> action, Predicate<object> canExecute)
-            : base((args, token) => action(token), canExecute)
-        {
-
-        }
-
-        #endregion
-    }
-
     #endregion
 
     /// <summary>
