@@ -10,12 +10,12 @@ XamForms.Extended is an open-source library created for my development purposes.
 - Install into your PCL/.NET Standard project and Client projects.
 - Nuget available [here](https://www.nuget.org/packages/XamForms.Enhanced) 
 
-### iOS
+#### iOS
 On iOS, in AppDelegate.cs, after ``Xamarin.Forms.Forms.Init()`` call:
 ```xml
 XamForms.EnhancedControls.iOS.EnhancedControls.Init();
 ```
-### Android
+#### Android
 On Android, in MainActivity.cs, after ``Xamarin.Forms.Forms.Init()`` call:
 ```xml
 XamForms.Enhanced.Droid.EnhancedControls.Init();
@@ -55,8 +55,20 @@ Then add the xaml:
 
 You can find samples of all controls in the sample folder.
 
-### Contributors
-* [lubiepomaranczki](https://github.com/lubiepomaranczki)
+## Contributing
 
-### License
-https://github.com/lubiepomaranczki/XamForms.Enhanced/blob/master/LICENSE
+Please read [CONTRIBUTING.md](https://github.com/lubiepomaranczki/XamForms.Enhanced) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. 
+
+## Authors
+
+* **Łukasz Ławicki** - [lubiepomaranczki](https://github.com/lubiepomaranczki)
+
+See also the list of project [contributors](https://github.com/lubiepomaranczki/XamForms.Enhanced/contributors)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/lubiepomaranczki/XamForms.Enhanced/blob/master/LICENSE) file for details
