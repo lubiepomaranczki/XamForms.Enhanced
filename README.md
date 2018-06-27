@@ -57,7 +57,7 @@ You can find samples of all controls in the sample folder.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/lubiepomaranczki/XamForms.Enhanced) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/lubiepomaranczki/XamForms.Enhanced/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
