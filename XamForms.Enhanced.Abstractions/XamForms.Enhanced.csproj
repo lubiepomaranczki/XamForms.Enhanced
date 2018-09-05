@@ -9,9 +9,14 @@
     <Folder Include="Views\" />
     <Folder Include="Observable\" />
     <Folder Include="Events\" />
-    <Folder Include="Commands\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\DynamicStackLayout.cs" />
+    <Compile Remove="Commands\InputRelayCommand.cs" />
+    <Compile Remove="Commands\OutputRelayCommand.cs" />
+    <Compile Remove="Commands\ParameterRelayCommand.cs" />
   </ItemGroup>
 </Project>

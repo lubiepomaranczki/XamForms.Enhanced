@@ -1,9 +1,7 @@
 ﻿using Xamforms.Enhanced.Sample.Models;
 using XamForms.Enhanced.ViewModels;
-using XamForms.Enhanced.Commands;
 using System;
-using System.Threading;
-using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace Xamforms.Enhanced.Sample.ViewModels
 {
@@ -13,8 +11,8 @@ namespace Xamforms.Enhanced.Sample.ViewModels
 
         private ObservableModel model;
 
-        private RelayCommand changeDateCmd;
-        private InputRelayCommand<string> changeTextCmd;
+        private Command changeDateCmd;
+        private Command<string> changeTextCmd;
 
         #endregion
 
@@ -34,9 +32,9 @@ namespace Xamforms.Enhanced.Sample.ViewModels
 
         #region Commands
 
-        public RelayCommand ChangeDateCmd => changeDateCmd ?? (changeDateCmd = new RelayCommand(ChangeDate));
+        public Command ChangeDateCmd => changeDateCmd ?? (changeDateCmd = new Command(ChangeDate));
 
-        public InputRelayCommand<string> ChangeTextCmd => changeTextCmd ?? (changeTextCmd = new InputRelayCommand<string>(ChangeText));
+        public Command<string> ChangeTextCmd => changeTextCmd ?? (changeTextCmd = new Command<string>(ChangeText));
 
         #endregion
 
@@ -53,20 +51,14 @@ namespace Xamforms.Enhanced.Sample.ViewModels
 
         #region Methods
 
-        private async Task ChangeDate(CancellationToken arg)
+        private void ChangeDate(object obj)
         {
-            //Do your API call or whatever you need
-            await Task.Delay(300);
-
             Model.Name.Value = "Date: " + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
             System.Diagnostics.Debug.WriteLine("I've just changed name");
         }
 
-        private async Task ChangeText(string text, CancellationToken arg2)
+        private void ChangeText(string text)
         {
-            //Do smth which requires async call
-            await Task.Delay(1);
-
             model.Text.Value = text;
         }
 

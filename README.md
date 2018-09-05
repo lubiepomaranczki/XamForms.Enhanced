@@ -26,7 +26,6 @@ XamForms.Enhanced.Droid.EnhancedControls.Init();
 - ExtendedStackLayout
 - ExtendedImage
 - GradientView
-- DynamicStackLayout
   
 ### Other features
 - BaseViewModel
