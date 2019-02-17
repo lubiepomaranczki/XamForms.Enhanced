@@ -11,7 +11,7 @@
     <Folder Include="Events\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.129452" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\DynamicStackLayout.cs" />

@@ -1,26 +1,41 @@
-﻿<Properties StartupConfiguration="{D06416BB-5CD7-4078-8598-EDB1EBB14B96}|Default">
-  <MonoDevelop.Ide.ItemProperties.sample.Xamforms.Enhanced.Sample.Droid PreferredExecutionTarget="Android.040fcc72028a4b12" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="sample/Xamforms.Enhanced.Sample.Abs/Views/SampleExtendedStackPage.xaml">
+﻿<Properties StartupConfiguration="{8E4DA0C3-E6FB-46D5-B8ED-571519BDEA20}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="sample/Xamforms.Enhanced.Sample.Abs/App.xaml.cs">
     <Files>
-      <File FileName="sample/iOS/Info.plist" />
-      <File FileName="XamForms.Enhanced.Abstractions/Commands/RelayCommand.cs" Line="105" Column="19" />
-      <File FileName="sample/Xamforms.Enhanced.Sample.Abs/ViewModels/SampleExtendedListViewViewModel.cs" Line="37" Column="50" />
-      <File FileName="sample/Xamforms.Enhanced.Sample.Abs/ViewModels/SampleExtendedStackViewModel.cs" Line="1" Column="1" />
-      <File FileName="sample/Xamforms.Enhanced.Sample.Abs/Views/SampleExtendedStackPage.xaml" Line="20" Column="92" />
+      <File FileName="sample/Xamforms.Enhanced.Sample.Abs/App.xaml.cs" Line="11" Column="71" />
+      <File FileName="sample/Xamforms.Enhanced.Sample.Abs/Views/SampleExtendedEntryPage.xaml.cs" Line="8" Column="16" />
     </Files>
     <Pads>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+      <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="XamForms.Enhanced" expanded="True" selected="True" />
+          <Node name="XamForms.Enhanced" expanded="True">
+            <Node name="sample" expanded="True">
+              <Node name="Xamforms.Enhanced.Sample" expanded="True">
+                <Node name="ViewModels" expanded="True" />
+                <Node name="Views" expanded="True">
+                  <Node name="SampleExtendedListViewPage.xaml" expanded="True" />
+                </Node>
+                <Node name="App.xaml" expanded="True">
+                  <Node name="App.xaml.cs" selected="True" />
+                </Node>
+              </Node>
+              <Node name="Xamforms.Enhanced.Sample.iOS" expanded="True">
+                <Node name="Packages" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="XamForms.Enhanced" expanded="True">
+              <Node name="Extensions" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.sample.Xamforms.Enhanced.Sample.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F911F61B-B9CD-4240-9ECC-6ECF8B0CDE65" />
+  <MonoDevelop.Ide.ItemProperties.sample.Xamforms.Enhanced.Sample.Droid PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.sample.Xamforms.Enhanced.Sample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D82516C7-ACE0-4E69-8853-4D5F57493C3B" automaticSigning="False" />
 </Properties>

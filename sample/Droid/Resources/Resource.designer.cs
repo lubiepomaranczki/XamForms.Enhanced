@@ -26,7 +26,6 @@ namespace Xamforms.Enhanced.Sample.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Xamforms.Enhanced.Sample.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
