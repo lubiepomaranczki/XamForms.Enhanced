@@ -27,6 +27,7 @@ XamForms.Enhanced.Droid.EnhancedControls.Init();
 - ExtendedImage
 - ExtendedLabel
 - ExtendedListView
+- ExtendedWebView
 - ExtendedStackLayout
 - ExtendedToolbarItem
 - GradientView
