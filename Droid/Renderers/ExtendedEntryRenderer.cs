@@ -9,7 +9,7 @@ using XamForms.Enhanced.Views;
 [assembly: ExportRenderer(typeof(ExtendedEntry), typeof(XamForms.Enhanced.Droid.Renderers.ExtendedEntryRenderer))]
 namespace XamForms.Enhanced.Droid.Renderers
 {
-    public class ExtendedEntryRenderer : EntryRenderer
+    public class ExtendedEntryRenderer : Xamarin.Forms.Platform.Android.EntryRenderer
     {
         #region Fields
 
