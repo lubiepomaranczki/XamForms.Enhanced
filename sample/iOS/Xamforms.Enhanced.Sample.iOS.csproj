@@ -122,10 +122,6 @@
       <Project>{DD816F54-06E9-463E-BDC0-500A9BB409B6}</Project>
       <Name>XamForms.Enhanced.iOS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Xamforms.Enhanced.Sample.Abs\Xamforms.Enhanced.Sample.csproj">
-      <Project>{B65056CE-A351-44B6-A86A-5BEFD4DD2BB4}</Project>
-      <Name>Xamforms.Enhanced.Sample</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.targets')" />
