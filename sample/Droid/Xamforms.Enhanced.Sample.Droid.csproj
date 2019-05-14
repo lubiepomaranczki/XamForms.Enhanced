@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Xamforms.Enhanced.Sample.Droid</RootNamespace>
     <AssemblyName>Xamforms.Enhanced.Sample.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
