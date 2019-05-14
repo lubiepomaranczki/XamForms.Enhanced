@@ -1,0 +1,22 @@
+# Version format
+version: 1.0.{build}
+
+# Build worker image
+image: Visual Studio 2017
+
+# Build platform
+platform: Any CPU
+
+# Build Configuration
+configuration: Debug
+
+# MSBuild settings
+build:
+  project: src\PROJECT.sln
+  verbosity: quiet
+
+# Execute script before build
+before_build:
+ - nuget restore src\PROJECT.sln
+
+# Omitted the tests, as they are not relevant for the question
