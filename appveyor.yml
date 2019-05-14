@@ -12,11 +12,11 @@ configuration: Debug
 
 # MSBuild settings
 build:
-  project: src\PROJECT.sln
+  project: XamForms.Enhanced.sln
   verbosity: quiet
 
 # Execute script before build
 before_build:
- - nuget restore src\PROJECT.sln
+ - nuget restore XamForms.Enhanced.sln
 
 # Omitted the tests, as they are not relevant for the question
