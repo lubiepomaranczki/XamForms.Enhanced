@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
    <metadata minClientVersion="2.8.1">
        <id>XamForms.Enhanced</id>
-       <version>2.0.0</version>
+       <version>$version$</version>
        <title>Custom controls and extensions for Xamarin.Forms</title>
        <authors>Lukasz Lawicki</authors>
        <owners>Lukasz Lawicki</owners>
