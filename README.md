@@ -7,7 +7,7 @@ XamForms.Extended is an open-source library created for my development purposes.
 - Xamarin.Android
 
 ### Setup
-- Install into your PCL/.NET Standard project and Client projects.
+- Install into your .NET Standard project and Client projects.
 - Nuget available [here](https://www.nuget.org/packages/XamForms.Enhanced) 
 
 #### iOS
