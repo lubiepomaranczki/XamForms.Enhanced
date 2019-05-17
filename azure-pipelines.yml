@@ -7,8 +7,8 @@ variables:
   buildConfiguration: 'Release'
   
 jobs:
-# - job: One
-#   steps:
+- job: One
+  steps:
 #   - script: echo First step!
 
 # MSBuild
