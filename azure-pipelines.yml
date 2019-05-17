@@ -1,9 +1,15 @@
+
+
 pool:
   vmImage: 'macOS-10.13'
 
 variables:    
   buildConfiguration: 'Release'
-
+  
+jobs:
+# - job: One
+#   steps:
+#   - script: echo First step!
 
 # MSBuild
 # Build with MSBuild
