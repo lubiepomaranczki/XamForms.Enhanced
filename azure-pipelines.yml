@@ -9,26 +9,31 @@ steps:
 - script: echo hello from pre-build
 
 # MSBuild
-# Build with MSBuild
-- task: MSBuild@1
-  inputs:
-    Project: '**/*iOS.csproj'
-    #solution: '**/*.sln' 
-    #msbuildLocationMethod: 'version' # Optional. Options: version, location
-    #msbuildVersion: 'latest' # Optional. Options: latest, 16.0, 15.0, 14.0, 12.0, 4.0
-    #msbuildArchitecture: 'x86' # Optional. Options: x86, x64
-    #msbuildLocation: # Optional
-    #platform: # Optional
-    #configuration: Release
-    #msbuildArguments: # Optional
-    clean: true
+# # Build with MSBuild
+# - task: MSBuild@1
+#   inputs:
+#     Project: '**/*iOS.csproj'
+#     #solution: '**/*.sln' 
+#     #msbuildLocationMethod: 'version' # Optional. Options: version, location
+#     #msbuildVersion: 'latest' # Optional. Options: latest, 16.0, 15.0, 14.0, 12.0, 4.0
+#     #msbuildArchitecture: 'x86' # Optional. Options: x86, x64
+#     #msbuildLocation: # Optional
+#     #platform: # Optional
+#     #configuration: Release
+#     #msbuildArguments: # Optional
+#     clean: true
     #maximumCpuCount: false # Optional
     #restoreNugetPackages: false # Optional
     #logProjectEvents: false # Optional
     #createLogFile: false # Optional
     #logFileVerbosity: 'normal' # Optional. Options: quiet, minimal, normal, detailed, diagnostic
     
-- script: iOS builded
+- script: 
+  msbuild /t:Clean
+  msbuild /t:restore XamForms.Enhanced.sln
+  msbuild /t:rebuild XamForms.Enhanced.Abstractions/XamForms.Enhanced.csproj  /property:Configuration=Release
+  msbuild /t:rebuild iOS/XamForms.Enhanced.iOS.csproj  /property:Configuration=Release
+  msbuild /t:rebuild Droid/XamForms.Enhanced.Droid.csproj  /property:Configuration=Release
 
 # steps:
 # - script: 
