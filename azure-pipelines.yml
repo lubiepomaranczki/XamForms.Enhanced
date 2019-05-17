@@ -5,7 +5,13 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- script: dotnet restore
+  displayName: 'dotnet restore'
 - script: msbuild /t:Clean
+  displayName: 'dotnet clean'
 - script: msbuild /t:rebuild XamForms.Enhanced.Abstractions/XamForms.Enhanced.csproj  /property:Configuration=Release
+  displayName: 'Core builded'
 - script: msbuild /t:rebuild iOS/XamForms.Enhanced.iOS.csproj  /property:Configuration=Release
+  displayName: 'iOS builded'
 - script: msbuild /t:rebuild Droid/XamForms.Enhanced.Droid.csproj  /property:Configuration=Release
+  displayName: 'Droid builded'
