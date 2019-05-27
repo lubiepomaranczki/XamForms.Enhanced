@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace XamForms.Enhanced.Extensions
 {
-    public static class IEnumerable
+    public static class IEnumerableExtensions
     {
         public static ObservableCollection<T> ToObservableCollection<T>(this IEnumerable<T> source)
         {
