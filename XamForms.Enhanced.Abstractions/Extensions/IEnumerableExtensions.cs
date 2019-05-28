@@ -11,7 +11,7 @@ namespace XamForms.Enhanced.Extensions
             return new ObservableCollection<T>(source);
         }
 
-        public static bool IsNullOrEMpty<T>(this IEnumerable<T> source)
+        public static bool IsNullOrEmpty<T>(this IEnumerable<T> source)
         {
             if (source == null || !source.Any())
             {
@@ -23,7 +23,7 @@ namespace XamForms.Enhanced.Extensions
 
         public static IList<T> CopyToList<T>(this IEnumerable<T> source)
         {
-            if (source.IsNullOrEMpty())
+            if (source.IsNullOrEmpty())
             {
                 return new List<T>();
             }
