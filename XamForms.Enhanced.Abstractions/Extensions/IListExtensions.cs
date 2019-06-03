@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace XamForms.Enhanced.Extensions
 {
-    public static class ListExtensions
+    public static class IListExtensions
     {
         public static void AddRange<T>(this IList<T> collection, IEnumerable<T> itemsToAdd)
         {
