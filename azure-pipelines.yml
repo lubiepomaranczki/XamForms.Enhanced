@@ -1,20 +1,27 @@
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: 4.5.1
 
-pool:
-  vmImage: 'macOS-10.13'
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
 
-variables:    
-  buildConfiguration: 'Release'
-  
-steps:
-    
-- script: msbuild /t:Clean
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.sln'
+    configuration: '$(BuildConfiguration)'
+    msbuildArguments: '/t:restore;build;pack /p:PackageVersion=$(Build.BuildNumber) /p:PackageOutputPath=$(build.artifactstagingdirectory)/public  /p:AssemblyFileVersion=$(Build.BuildNumber)'
 
-  displayName: 'dotnet clean'
-- script: msbuild /t:restore XamForms.Enhanced.sln
-  displayName: 'dotnet restore'
-- script: msbuild /t:rebuild XamForms.Enhanced.Abstractions/XamForms.Enhanced.csproj  /property:Configuration=Release
-  displayName: 'Core builded'
-- script: msbuild /t:rebuild iOS/XamForms.Enhanced.iOS.csproj  /property:Configuration=Release
-  displayName: 'iOS builded'
-- script: msbuild /t:rebuild Droid/XamForms.Enhanced.Droid.csproj  /property:Configuration=Release
-  displayName: 'Droid builded restore'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)'
+    Contents: '**\bin\$(BuildConfiguration)\**\*.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
