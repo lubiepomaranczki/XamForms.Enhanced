@@ -1,4 +1,3 @@
-steps:
 - task: NuGetToolInstaller@1
   inputs:
     versionSpec: 4.5.1
@@ -9,9 +8,9 @@ steps:
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
 
-- script: msbuild /t:rebuild XamForms.Enhanced.Abstractions/XamForms.Enhanced.csproj  /property:Configuration=Release
-  displayName: 'Core builded'
-- script: msbuild /t:rebuild iOS/XamForms.Enhanced.iOS.csproj  /property:Configuration=Release
-  displayName: 'iOS builded'
-- script: msbuild /t:rebuild Droid/XamForms.Enhanced.Droid.csproj  /property:Configuration=Release
-  displayName: 'Droid builded restore'
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.sln'
+    configuration: 'Release'
+    platform: 'Any CPU'
+    msbuildArguments: '/t:build'
