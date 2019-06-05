@@ -7,15 +7,6 @@ trigger:
 pool:
   vmImage: 'macos-latest'
 
-steps:
-- task: CmdLine@2
-  inputs:
-    script: 'echo version: $(Build.BuildId)'
-
-- task: CmdLine@2
-  inputs:
-    script: 'echo version: $(version)'
-
 - task: NuGetToolInstaller@1
   inputs:
     versionSpec: 4.5.1
@@ -35,11 +26,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'nuget pack XamForms.Enhanced.nuspec'
-
-- task: CmdLine@2
-  inputs:
-    script: 'echo $(versionnumber)'
+    script: 'nuget pack XamForms.Enhanced.nuspec -version $(version)'
 
 - task: CopyFiles@2
   inputs:
