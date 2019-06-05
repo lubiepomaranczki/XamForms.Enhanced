@@ -29,7 +29,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(build.sourcesdirectory)'
-    Contents: '\*.nupkg'
+    Contents: '*/*.nupkg'
     TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
