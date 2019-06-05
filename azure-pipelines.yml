@@ -1,3 +1,6 @@
+variables:
+  version_number: 2.0.0$(rev:.r) 
+
 trigger:
 - master
 
@@ -24,7 +27,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'nuget pack XamForms.Enhanced.nuspec'
+    script: 'nuget pack XamForms.Enhanced.nuspec -version $(version_number)'
 
 - task: CmdLine@2
   inputs:
