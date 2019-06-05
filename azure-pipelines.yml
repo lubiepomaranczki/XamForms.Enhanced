@@ -1,3 +1,6 @@
+variables:
+  version_number:
+
 trigger:
 - master
 
@@ -5,11 +8,13 @@ pool:
   vmImage: 'macos-latest'
 
 steps:
-- task: versioncounter@1
+- task: CmdLine@2
   inputs:
-    VersionVariable: '2.0.0'
-    UpdateMinorVersion: true
-    DevOpsPat: '7hvix4g66gs54nohy64omxlyyglx7y7u4wlcpvgyz33wkwzg3qaa'
+    script: 'echo version: $(version_number)'
+
+- task: CmdLine@2
+  inputs:
+    script: 'echo version: $(version)'
 
 - task: NuGetToolInstaller@1
   inputs:
