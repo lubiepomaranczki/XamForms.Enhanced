@@ -1,4 +1,5 @@
 variables:
+
   version_number: 2.0.0$env:BUILD_BUILDNUMBER 
 
 trigger:
@@ -8,6 +9,12 @@ pool:
   vmImage: 'macos-latest'
 
 steps:
+- task: versioncounter@1
+  inputs:
+    VersionVariable: '2.0.0'
+    UpdateMinorVersion: true
+    DevOpsPat: '7hvix4g66gs54nohy64omxlyyglx7y7u4wlcpvgyz33wkwzg3qaa'
+
 - task: NuGetToolInstaller@1
   inputs:
     versionSpec: 4.5.1
@@ -31,7 +38,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'echo $(version_number)'
+    script: 'echo $(versionnumber)'
 
 - task: CopyFiles@2
   inputs:
