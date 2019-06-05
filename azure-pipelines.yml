@@ -41,3 +41,6 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
+- task: CmdLine@2
+  inputs:
+    script: 'nuget.exe push -Source https://api.nuget.org/v3/index.json -ApiKey oy2frpm3ndnj5s7nttaaihhfezjw5x4eznatu5dw7xlw2e ''$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'''
