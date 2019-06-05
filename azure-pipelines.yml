@@ -21,3 +21,22 @@ steps:
     configuration: 'Release'
     platform: 'Any CPU'
     msbuildArguments: '/t:build'
+    
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.sln'
+    configuration: '$(Release)'
+    platform: 'Any CPU'
+    msbuildArguments: '/t:pack /p:PackageVersion=$(Build.BuildNumber) /p:PackageOutputPath=$(build.artifactstagingdirectory)/public /p:AssemblyFileVersion=$(Build.BuildNumber)'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)'
+    Contents: '**\bin\$(BuildConfiguration)\**\*.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
