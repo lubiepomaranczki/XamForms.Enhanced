@@ -1,5 +1,5 @@
 variables:
-  version_number: 2.0.0$(BUILD_BUILDNUMBER) 
+  version_number: 2.0.0$($env:BUILD_BUILDNUMBER) 
 
 trigger:
 - master
