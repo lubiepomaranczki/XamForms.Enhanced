@@ -1,5 +1,5 @@
 variables:
-  version: 2.2.2.$(Build.BuildId)
+  version: 2.2.2.$(Build.BuildId)-alpha
 
 trigger:
 - master
@@ -28,7 +28,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'nuget pack XamForms.Enhanced.nuspec -version $(version)-alpha'
+    script: 'nuget pack XamForms.Enhanced.nuspec -version $(version)'
 
 - task: CopyFiles@2
   inputs:
