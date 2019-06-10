@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
    <metadata minClientVersion="2.8.1">
        <id>XamForms.Enhanced</id>
-       <version>2.0.0</version>
+       <version>2.2.2-beta</version>
        <title>Custom controls and extensions for Xamarin.Forms</title>
        <authors>Lukasz Lawicki</authors>
        <owners>Lukasz Lawicki</owners>
@@ -11,12 +11,12 @@
        <iconUrl>https://raw.githubusercontent.com/lubiepomaranczki/XamForms.Enhanced/master/icon.png</iconUrl>
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>
-	   Version 1.1.0 or above Built against: 2.5.0.121934
+	   Version 2.2.2-beta or above Built against: 3.6.0.344457
        </description>
        <summary>XamForms.Enhanced is my set of custom properties/other things which I use across most of my projects</summary>
        <tags>xamarin, pcl, xam.pcl, android, xamarin.forms, ios, MVVM, controls</tags>
        <dependencies>
-         <dependency id="Xamarin.Forms" version="2.5.0.121934" />
+         <dependency id="Xamarin.Forms" version="3.6.0.344457" />
        </dependencies>
        <releaseNotes>
   [2.0.0]
@@ -48,14 +48,14 @@
    </metadata>
    <files>
      <!--Net Standard-->
-     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard1.4/XamForms.Enhanced.dll" target="lib/netstandard1.4/XamForms.Enhanced.dll" />
+     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard2.0/XamForms.Enhanced.dll" target="lib/netstandard1.4/XamForms.Enhanced.dll" />
      	 
      <!--Xamarin.Android-->
-     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard1.4/XamForms.Enhanced.dll" target="lib/MonoAndroid70/XamForms.Enhanced.dll" />
+     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard2.0/XamForms.Enhanced.dll" target="lib/MonoAndroid70/XamForms.Enhanced.dll" />
      <file src="Droid/bin/Release/XamForms.Enhanced.Droid.dll" target="lib/MonoAndroid70/XamForms.Enhanced.Droid.dll" />	 
 
      <!--Xamarin.iOS-->
-     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard1.4/XamForms.Enhanced.dll" target="lib/Xamarin.iOS10/XamForms.Enhanced.dll" />
+     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard2.0/XamForms.Enhanced.dll" target="lib/Xamarin.iOS10/XamForms.Enhanced.dll" />
      <file src="iOS/bin/Release/XamForms.Enhanced.iOS.dll" target="lib/Xamarin.iOS10/XamForms.Enhanced.iOS.dll" />
 		
    </files>
