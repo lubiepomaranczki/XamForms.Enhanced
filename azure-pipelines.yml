@@ -1,0 +1,43 @@
+variables:
+  version: 2.2.2.$(Build.BuildId)
+
+trigger:
+- master
+- develop
+
+pool:
+  vmImage: 'macos-latest'
+
+steps:
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: 4.5.1
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.sln'
+    configuration: 'Release'
+    platform: 'Any CPU'
+    msbuildArguments: '/t:build'
+
+- task: CmdLine@2
+  inputs:
+    script: 'nuget pack XamForms.Enhanced.nuspec -version $(version)-alpha'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)'
+    Contents: '*.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
