@@ -1,5 +1,5 @@
 variables:
-  version: 2.2.2.$(Build.BuildId)-alpha
+  version: 2.2.2.$(Build.BuildId)
 
 trigger:
 - master
