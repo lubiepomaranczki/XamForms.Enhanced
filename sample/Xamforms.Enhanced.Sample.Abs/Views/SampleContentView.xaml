@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<views:ExtendedContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:XamForms.Enhanced.Views;assembly=XamForms.Enhanced"
+             x:Class="Xamforms.Enhanced.Sample.Views.SampleContentView">
+    <ContentView.Content>
+        <StackLayout>
+            <Label Text="I'm content view!"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentView.Content>
+</views:ExtendedContentView>

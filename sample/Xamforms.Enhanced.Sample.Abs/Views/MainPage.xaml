@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:XamForms.Enhanced.Views;assembly=XamForms.Enhanced"
+             x:Class="Xamforms.Enhanced.Sample.Views.MainPage"
+             Title="MainPage">
+    <ContentPage.Content>
+        <views:ExtendedListView 
+            ItemsSource="{Binding Pages}" 
+            IsRefreshing="{Binding IsBusy}"
+            ItemSelectedCommand="{Binding PageSelectedCmd}"
+            ShouldHiglightSelected="false"
+            HasUnevenRows="false" 
+            SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding DisplayName}" TextColor="#000000" VerticalOptions="Center" Margin="16,16"/>  
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </views:ExtendedListView>
+    </ContentPage.Content>
+</ContentPage>

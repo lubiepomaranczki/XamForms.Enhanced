@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.props" Condition="Exists('..\..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.props')" />
   <PropertyGroup>
@@ -125,6 +125,10 @@
     <ProjectReference Include="..\..\Droid\XamForms.Enhanced.Droid.csproj">
       <Project>{D92B32B9-4352-4E2C-8B66-7F4AF090A168}</Project>
       <Name>XamForms.Enhanced.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xamforms.Enhanced.Sample.Abs\Xamforms.Enhanced.Sample.csproj">
+      <Project>{d66f89af-2ed5-467e-bc4f-c35ba2b16a54}</Project>
+      <Name>Xamforms.Enhanced.Sample</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
