@@ -18,7 +18,8 @@ namespace Xamforms.Enhanced.Sample.ViewModels
         
         public ObservableCollection<PageItem> Pages => new ObservableCollection<PageItem>
         {
-            new PageItem("Gradient View", typeof(SampleGradientPage))
+            new PageItem("Gradient View", typeof(SampleGradientPage)),
+            new PageItem("Content View", typeof(SampleContentPage)),
         };
         
         public  ICommand PageSelectedCmd => new Command<PageItem>(async (page) =>
@@ -26,6 +27,10 @@ namespace Xamforms.Enhanced.Sample.ViewModels
             if (page.PageType == typeof(SampleGradientPage))
             {
                 await Navigation.PushAsync(new SampleGradientPage());
+            }
+            if (page.PageType == typeof(SampleContentPage))
+            {
+                await Navigation.PushAsync(new SampleContentPage());
             }
         });
     }
