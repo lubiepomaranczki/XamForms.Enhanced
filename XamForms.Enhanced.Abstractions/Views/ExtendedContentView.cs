@@ -50,7 +50,7 @@ namespace XamForms.Enhanced.Views
         /// </summary>
         protected virtual void OnViewDisappeared()
         {
-            var copyOfToolbar = new List<ToolbarItem>(_currentPage.ToolbarItems); 
+            var copyOfToolbar = _currentPage.ToolbarItems.CopyToList(); 
             foreach (var toolbarItem in copyOfToolbar)
             {
                 _currentPage.ToolbarItems.Remove(toolbarItem);
