@@ -4,9 +4,9 @@
              xmlns:views="clr-namespace:XamForms.Enhanced.Views;assembly=XamForms.Enhanced"
              x:Class="Xamforms.Enhanced.Sample.Views.SampleContentView">
     <ContentView.Content>
-        <StackLayout>
+        <StackLayout x:Name="StackLayout">
             <Label 
-                x:Name="textLabel"
+                x:Name="TextLabel"
                 Text="I'm content view!"
                 VerticalOptions="Center"
                 HorizontalOptions="Center" />
