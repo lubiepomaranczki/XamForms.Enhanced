@@ -5,9 +5,12 @@
              x:Class="Xamforms.Enhanced.Sample.Views.SampleContentView">
     <ContentView.Content>
         <StackLayout>
-            <Label Text="I'm content view!"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center" />
+            <Label 
+                x:Name="textLabel"
+                Text="I'm content view!"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+            <Button Clicked="Button_OnClicked" WidthRequest="100" Text="Change text" BackgroundColor="Crimson"/>
         </StackLayout>
     </ContentView.Content>
 </views:ExtendedContentView>

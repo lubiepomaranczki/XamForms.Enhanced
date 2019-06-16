@@ -35,5 +35,11 @@ namespace Xamforms.Enhanced.Sample.Views
             toolbar.Add(new ToolbarItem("Watch",null, () => { Console.WriteLine("Item was tapped"); }));
             Console.WriteLine($"{nameof(SampleContentView)} toolbar ready");
         }
+
+        //This is here to check if OnPropertyChanged is being invoked with renderer
+        private void Button_OnClicked(object sender, EventArgs e)
+        {
+            textLabel.Text = DateTime.Now.ToString("hh:mm:ss");
+        }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using XamForms.Enhanced.Extensions;
@@ -15,15 +16,15 @@ namespace XamForms.Enhanced.Views
         protected override void OnPropertyChanged(string propertyName = null)
         {
             base.OnPropertyChanged(propertyName);
+            Console.WriteLine(propertyName);
 
-            if (IsVisible && !_didAppear)
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            if (propertyName=="Renderer" && IsVisible && !_didAppear)
             {
                 _didAppear = true;
                 OnViewAppeared();
             }
-
-            var navigationPage = Application.Current.MainPage as NavigationPage;
-            if (propertyName=="Renderer" && _didAppear && navigationPage != null )
+            else if (propertyName=="Renderer" && _didAppear && navigationPage != null )
             {
                 OnViewDisappeared();
                 _didAppear = false;
