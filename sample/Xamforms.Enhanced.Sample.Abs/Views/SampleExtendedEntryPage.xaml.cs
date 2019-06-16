@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
+using Xamarin.Forms;
+using Xamforms.Enhanced.Sample.Models;
 using Xamforms.Enhanced.Sample.ViewModels;
 
 namespace Xamforms.Enhanced.Sample.Views

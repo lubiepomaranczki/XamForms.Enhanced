@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Renderers\GradientViewRenderer.cs" />
     <Compile Include="Extensions\ColorExtensions.cs" />
     <Compile Include="Renderers\ExtendedEntryRenderer.cs" />
+    <Compile Include="Controls\EnhancedUIButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamForms.Enhanced.Abstractions\XamForms.Enhanced.csproj">

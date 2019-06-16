@@ -1,8 +1,9 @@
 variables:
-  version: 2.2.2.$(Build.BuildId)
+  version: 2.2.2.$(Build.BuildId)-alpha
 
 trigger:
 - master
+- develop
 
 pool:
   vmImage: 'macos-latest'
@@ -38,5 +39,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: 'drop'
+    ArtifactName: 'artifacts'
     publishLocation: 'Container'
