@@ -26,6 +26,20 @@ steps:
     platform: 'Any CPU'
     msbuildArguments: '/t:build'
 
+- task: MSBuild@1
+  inputs:
+    solution: '**/XamForms.Enhanced.iOS.csproj'
+    configuration: 'Release'
+    platform: 'Any CPU'
+    msbuildArguments: '/t:build'
+
+- task: MSBuild@1
+  inputs:
+    solution: '**/XamForms.Enhanced.Droid.csproj'
+    configuration: 'Release'
+    platform: 'Any CPU'
+    msbuildArguments: '/t:build'
+
 - task: CmdLine@2
   inputs:
     script: 'nuget pack XamForms.Enhanced.nuspec -version $(version)'
