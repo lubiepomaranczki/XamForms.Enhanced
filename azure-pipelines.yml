@@ -21,7 +21,7 @@ steps:
 
 - task: MSBuild@1
   inputs:
-    solution: '**/*.sln'
+    solution: '**/XamForms.Enhanced.csproj'
     configuration: 'Release'
     platform: 'Any CPU'
     msbuildArguments: '/t:build'
