@@ -21,21 +21,7 @@ steps:
 
 - task: MSBuild@1
   inputs:
-    solution: '**/XamForms.Enhanced.csproj'
-    configuration: 'Release'
-    platform: 'Any CPU'
-    msbuildArguments: '/t:build'
-
-- task: MSBuild@1
-  inputs:
-    solution: '**/XamForms.Enhanced.iOS.csproj'
-    configuration: 'Release'
-    platform: 'Any CPU'
-    msbuildArguments: '/t:build'
-
-- task: MSBuild@1
-  inputs:
-    solution: '**/XamForms.Enhanced.Droid.csproj'
+    solution: '**/*.sln'
     configuration: 'Release'
     platform: 'Any CPU'
     msbuildArguments: '/t:build'
