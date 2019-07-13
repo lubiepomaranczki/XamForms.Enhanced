@@ -166,8 +166,8 @@ Task("CopyPackages")
 
 Task("Default")
     .IsDependentOn("Build")
-    .IsDependentOn("BuildiOS")
     .IsDependentOn("BuildAndroid")
+    .IsDependentOn("BuildiOS")
     .IsDependentOn("NugetPack")
     .IsDependentOn("CopyPackages");
     
