@@ -10,7 +10,7 @@ steps:
     arguments: '--target=$(target) --configuration=$(configuration) --outputDir=$(Build.ArtifactStagingDirectory)'
     failOnStderr: true
 
-- task: PublishBuildArtifacts@2
+- task: PublishBuildArtifacts@1
   inputs:
     SourceFolder: '$(build.sourcesdirectory)/artifacts'
     Contents: '*.nupkg'
