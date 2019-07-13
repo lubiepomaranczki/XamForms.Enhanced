@@ -2,6 +2,7 @@
 #tool GitVersion.CommandLine
 #addin Cake.Figlet
 #addin nuget:?package=Cake.Plist
+#addin nuget:?package=Cake.Git&version=0.19.0
 
 var sln = new FilePath("./XamForms.Enhanced.sln");
 var iOSProj = new FilePath("./iOS/XamForms.Enhanced.iOS.csproj");
