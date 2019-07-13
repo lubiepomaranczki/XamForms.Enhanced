@@ -10,13 +10,6 @@ steps:
     arguments: '--target=$(target) --configuration=$(configuration) --outputDir=$(Build.ArtifactStagingDirectory)'
     failOnStderr: true
 
-- task: PublishBuildArtifacts@1
-  condition: always()
-  inputs:
-    artifactName: 'drop'
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
-
-
 - task: PublishBuildArtifacts@2
   inputs:
     SourceFolder: '$(build.sourcesdirectory)/artifacts'
