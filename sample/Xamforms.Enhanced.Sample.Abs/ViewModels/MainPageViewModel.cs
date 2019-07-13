@@ -19,6 +19,7 @@ namespace Xamforms.Enhanced.Sample.ViewModels
         public ObservableCollection<PageItem> Pages => new ObservableCollection<PageItem>
         {
             new PageItem("Gradient View", typeof(SampleGradientPage)),
+            new PageItem("Extended Frame", typeof(SampleExtendedFramePage)),
             new PageItem("Content View", typeof(SampleContentPage)),
         };
         
@@ -31,6 +32,10 @@ namespace Xamforms.Enhanced.Sample.ViewModels
             if (page.PageType == typeof(SampleContentPage))
             {
                 await Navigation.PushAsync(new SampleContentPage());
+            }
+            if (page.PageType == typeof(SampleExtendedFramePage))
+            {
+                await Navigation.PushAsync(new SampleExtendedFramePage());
             }
         });
     }

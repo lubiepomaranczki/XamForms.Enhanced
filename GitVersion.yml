@@ -1,0 +1,20 @@
+branches:
+  master:
+    regex: master
+    mode: ContinuousDelivery
+    tag: ''
+    increment: Patch
+  release:
+    regex: releases?[/-]
+    mode: ContinuousDelivery
+    tag: beta
+    increment: Patch
+  feature:
+    regex: features?[/-]
+    mode: ContinuousDeployment    
+    increment: Minor
+  develop:
+    regex: dev(elop)?(ment)?$
+    mode: ContinuousDeployment
+    tag: alpha
+    increment: Minor

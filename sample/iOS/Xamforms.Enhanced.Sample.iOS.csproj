@@ -133,6 +133,17 @@
       <Name>Xamforms.Enhanced.Sample</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\..\..\..\Desktop\ic_wanna_visit.png">
+      <Link>Resources\ic_wanna_visit.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\..\..\Desktop\ic_wanna_visit@2x.png">
+      <Link>Resources\ic_wanna_visit@2x.png</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\..\..\Desktop\ic_wanna_visit@3x.png">
+      <Link>Resources\ic_wanna_visit@3x.png</Link>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.targets')" />
 </Project>

@@ -4,10 +4,13 @@
              xmlns:views="clr-namespace:XamForms.Enhanced.Views;assembly=XamForms.Enhanced"
              x:Class="Xamforms.Enhanced.Sample.Views.SampleContentView">
     <ContentView.Content>
-        <StackLayout>
-            <Label Text="I'm content view!"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center" />
+        <StackLayout x:Name="StackLayout">
+            <Label 
+                x:Name="TextLabel"
+                Text="I'm content view!"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+            <Button Clicked="Button_OnClicked" WidthRequest="100" Text="Change text" BackgroundColor="Crimson"/>
         </StackLayout>
     </ContentView.Content>
 </views:ExtendedContentView>

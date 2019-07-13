@@ -1,43 +1,11 @@
-variables:
-  version: 2.2.2.$(Build.BuildId)-alpha
-
-trigger:
-- master
-- develop
-
 pool:
   vmImage: 'macos-latest'
 
 steps:
-- task: NuGetToolInstaller@1
+- task: Bash@3
+  displayName: 'Cake Build script'
   inputs:
-    versionSpec: 4.5.1
-
-- task: NuGetCommand@2
-  inputs:
-    command: 'restore'
-    restoreSolution: '**/*.sln'
-    feedsToUse: 'select'
-
-- task: MSBuild@1
-  inputs:
-    solution: '**/*.sln'
-    configuration: 'Release'
-    platform: 'Any CPU'
-    msbuildArguments: '/t:build'
-
-- task: CmdLine@2
-  inputs:
-    script: 'nuget pack XamForms.Enhanced.nuspec -version $(version)'
-
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(build.sourcesdirectory)'
-    Contents: '*.nupkg'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: 'artifacts'
-    publishLocation: 'Container'
+    targetType: filePath
+    filePath: ./build.sh
+    arguments: '--target=$(target) --configuration=$(configuration) --verbosity=$(verbosity) --outputDir=$(Build.ArtifactStagingDirectory)'
+    failOnStderr: true
