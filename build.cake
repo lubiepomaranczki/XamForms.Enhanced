@@ -94,6 +94,7 @@ Task("RestorePackages")
 {
     NuGetRestore(sln, new NuGetRestoreSettings { NoCache = true });
 
+    //TODO figure out why it is not working
     // var settings = GetDefaultBuildSettings()
     //     .WithTarget("Restore");
     // MSBuild(sln, settings);
@@ -150,11 +151,14 @@ Task("NugetPack")
     .IsDependentOn("Build")
     .IsDependentOn("BuildAndroid")    
     .IsDependentOn("BuildiOS")    
-    .IsDependentOn("CopyPackages")
     .Does(() =>
 {
+    var version = string.IsNullOrEmpty(versionInfo.PreReleaseLabel)? versionInfo.MajorMinorPatch : $"{versionInfo.MajorMinorPatch}-{versionInfo.PreReleaseLabel}";
+
+    Information($"Making version: {version}");
+
     NuGetPack("./XamForms.Enhanced.nuspec", new NuGetPackSettings{
-            Version = $"{versionInfo.MajorMinorPatch}-{versionInfo.PreReleaseLabel}", 
+            Version = version, 
             Description = "TBD", 
             Verbosity = NuGetVerbosity.Detailed,
         });
@@ -165,6 +169,7 @@ Task("CopyPackages")
     .Does(() => 
 {
     var nugetFiles = GetFiles("./*.nupkg");
+    var gitVersionLog = new FilePath("./gitversion.log");
     CopyFiles(nugetFiles, outputDir);
 });
 
@@ -175,9 +180,6 @@ Task("Default")
     .IsDependentOn("NugetPack")
     .IsDependentOn("CopyPackages")
     .Does(() => {});
-
-RunTarget(target);
-
 
 RunTarget(target);
 
