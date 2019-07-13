@@ -16,6 +16,7 @@ var verbosity = Verbosity.Minimal;
 var outputDirArgument = Argument("outputDir", "./artifacts");
 var outputDir = new DirectoryPath(outputDirArgument);
 var gitVersionLog = new FilePath("./gitversion.log");
+var nugetPackagesDir = new DirectoryPath("./nuget/packages");
 
 // Azure DevOps release note args
 var azureDevOpsApiKey = Argument("azureDevOpsApiKey", "");
@@ -48,13 +49,12 @@ Task("Clean")
 {    
     CleanDirectories("./**/bin");
     CleanDirectories("./**/obj");
-    
+    CleanDirectories(nugetPackagesDir.FullPath);    
     CleanDirectory(outputDir.FullPath);
 
     EnsureDirectoryExists(outputDir);
 
     MoveFileToDirectory(gitVersionLog, outputDir);
-
 });
 
 Task("CleanUntracked")
@@ -134,8 +134,8 @@ Task("Build")
     .Does(() =>
 {
     var settings = GetDefaultBuildSettings()
-        .WithProperty("Version", versionInfo.NuGetVersion)
-        .WithProperty("PackageVersion", versionInfo.NuGetVersion)
+        .WithProperty("Version", versionInfo.SemVer)
+        .WithProperty("PackageVersion", versionInfo.SemVer)
         .WithProperty("InformationalVersion", versionInfo.InformationalVersion)
         .WithTarget("Build");
 
