@@ -9,3 +9,9 @@ steps:
     filePath: ./build.sh
     arguments: '--target=$(target) --configuration=$(configuration) --verbosity=$(verbosity) --outputDir=$(Build.ArtifactStagingDirectory)'
     failOnStderr: true
+
+- task: PublishBuildArtifacts@1
+  condition: always()
+  inputs:
+    artifactName: 'drop'
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
