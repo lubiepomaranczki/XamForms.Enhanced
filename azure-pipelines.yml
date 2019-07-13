@@ -7,15 +7,19 @@ steps:
   inputs:
     targetType: filePath
     filePath: ./build.sh
-    arguments: '--target=$(target) --configuration=$(configuration) --outputDir=$(Build.ArtifactStagingDirectory)'
+    arguments: '--target=$(target) --configuration=$(configuration) --outputDirArgument=$(Build.ArtifactStagingDirectory)'
     failOnStderr: true
-
-- task: CmdLine@2
-  inputs:
-    script: 'ls'
 
 - task: PublishBuildArtifacts@1
   inputs:
     SourceFolder: '$(build.sourcesdirectory)/artifacts'
     Contents: '*.nupkg'
-    TargetFolder: '$(build.ArtifactStagingDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: CmdLine@2
+  inputs:
+    script: 'artifacts'
+
+- task: CmdLine@2
+  inputs:
+    script: 'ls'
