@@ -39,7 +39,7 @@ Setup(context =>
         target,
         cakeVersion);
 
-    verbosity = (Verbosity) Enum.Parse(typeof(Verbosity), verbosityArg, true);
+    verbosity = Verbosity.Normal; //(Verbosity) Enum.Parse(typeof(Verbosity), verbosityArg, true);
 });
 
 Task("Clean")
