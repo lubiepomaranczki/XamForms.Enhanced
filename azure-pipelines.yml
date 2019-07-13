@@ -12,7 +12,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    SourceFolder: '/artifacts'
+    SourceFolder: 'artifacts'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: CmdLine@2
