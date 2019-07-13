@@ -7,7 +7,7 @@ steps:
   inputs:
     targetType: filePath
     filePath: ./build.sh
-    arguments: '--target=$(target) --configuration=$(configuration) --verbosity=$(verbosity) --outputDir=$(Build.ArtifactStagingDirectory)'
+    arguments: '--target=$(target) --configuration=$(configuration) --outputDir=$(Build.ArtifactStagingDirectory)'
     failOnStderr: true
 
 - task: PublishBuildArtifacts@1
@@ -15,3 +15,10 @@ steps:
   inputs:
     artifactName: 'drop'
     pathtoPublish: '$(Build.ArtifactStagingDirectory)'
+
+
+- task: PublishBuildArtifacts@2
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)/artifacts'
+    Contents: '*.nupkg'
+    TargetFolder: '$(build.ArtifactStagingDirectory)'

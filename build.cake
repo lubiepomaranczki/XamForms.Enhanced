@@ -25,6 +25,8 @@ GitVersion versionInfo = null;
 
 Setup(context =>
 {
+    EnsureDirectoryExists(outputDir);
+
     versionInfo = context.GitVersion(new GitVersionSettings {
         UpdateAssemblyInfo = true,
         OutputType = GitVersionOutput.Json,
