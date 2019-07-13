@@ -54,6 +54,7 @@ Task("Clean")
     EnsureDirectoryExists(outputDir);
 
     MoveFileToDirectory(gitVersionLog, outputDir);
+    
 });
 
 Task("CleanUntracked")
