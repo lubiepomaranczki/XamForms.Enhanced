@@ -10,6 +10,10 @@ steps:
     arguments: '--target=$(target) --configuration=$(configuration) --outputDir=$(Build.ArtifactStagingDirectory)'
     failOnStderr: true
 
+- task: CmdLine@2
+  inputs:
+    script: 'ls'
+
 - task: PublishBuildArtifacts@1
   inputs:
     SourceFolder: '$(build.sourcesdirectory)/artifacts'
