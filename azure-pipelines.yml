@@ -1,9 +1,8 @@
 variables:
-  version: 2.2.2.$(Build.BuildId)-alpha
+  version: 2.2.$(Build.BuildId)
 
 trigger:
 - master
-- develop
 
 pool:
   vmImage: 'macos-latest'
@@ -35,9 +34,3 @@ steps:
     SourceFolder: '$(build.sourcesdirectory)'
     Contents: '*.nupkg'
     TargetFolder: '$(build.artifactstagingdirectory)'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-    ArtifactName: 'artifacts'
-    publishLocation: 'Container'
