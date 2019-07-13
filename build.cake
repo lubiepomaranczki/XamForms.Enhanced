@@ -1,14 +1,14 @@
-#tool vswhere
-#tool GitVersion.CommandLine
-#addin Cake.Figlet
-#addin nuget:?package=Cake.Plist
+#tool nuget:?package=GitVersion.CommandLine&version=4.0.0
+#tool nuget:?package=vswhere&version=2.6.7
+#addin nuget:?package=Cake.Figlet&version=1.2.0
+#addin nuget:?package=Cake.Plist&version=0.5.0
 #addin nuget:?package=Cake.Git&version=0.19.0
 
 var sln = new FilePath("./XamForms.Enhanced.sln");
 var iOSProj = new FilePath("./iOS/XamForms.Enhanced.iOS.csproj");
 var droidProj = new FilePath("./Droid/XamForms.Enhanced.Droid.csproj");
 var coreProj = new FilePath("./XamForms.Enhanced.Abstractions/XamForms.Enhanced.csproj");
-var target = Argument("target", "Any CPU");
+var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
 var verbosityArg = Argument("verbosity", "Minimal");
 var prereleaseTools = Argument<bool>("prereleasetools", false);
@@ -54,7 +54,7 @@ Task("Clean")
     EnsureDirectoryExists(outputDir);
 
     MoveFileToDirectory(gitVersionLog, outputDir);
-    
+
 });
 
 Task("CleanUntracked")
@@ -108,7 +108,7 @@ Task("BuildAndroid")
         .WithProperty("InformationalVersion", versionInfo.InformationalVersion)
         .WithTarget("Build");
 
-    MSBuild(iOSProj, settings);
+    MSBuild(droidProj, settings);
 });
 
 Task("BuildiOS")
@@ -142,6 +142,20 @@ Task("Build")
     MSBuild(coreProj, settings);
 });
 
+Task("NugetPack")
+    .IsDependentOn("Build")
+    .IsDependentOn("BuildiOS")
+    .IsDependentOn("BuildAndroid")    
+    .IsDependentOn("CopyPackages")
+    .Does(() =>
+{
+    NuGetPack("./XamForms.Enhanced.nuspec", new NuGetPackSettings{
+            Version = versionInfo.SemVer, 
+            Description = "TBD", 
+            Verbosity = NuGetVerbosity.Detailed,
+        });
+});
+
 Task("CopyPackages")
     .IsDependentOn("Build")
     .Does(() => 
@@ -150,10 +164,16 @@ Task("CopyPackages")
     CopyFiles(nugetFiles, outputDir);
 });
 
-Task("ExportDsym")
-    .Does(async () => 
-{
-});
+Task("Default")
+    .IsDependentOn("Build")
+    .IsDependentOn("BuildiOS")
+    .IsDependentOn("BuildAndroid")
+    .IsDependentOn("NugetPack")
+    .IsDependentOn("CopyPackages");
+    
+
+RunTarget(target);
+
 
 RunTarget(target);
 
