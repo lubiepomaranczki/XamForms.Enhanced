@@ -13,5 +13,5 @@ steps:
 - task: PublishBuildArtifacts@1
   condition: always()
   inputs:
-    artifactName: 'artifacts'
+    artifactName: 'drop'
     pathtoPublish: '$(Build.ArtifactStagingDirectory)'

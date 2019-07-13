@@ -169,7 +169,8 @@ Task("CopyPackages")
     .Does(() => 
 {
     var nugetFiles = GetFiles("./*.nupkg");
-    var gitVersionLog = new FilePath("./gitversion.log");
+
+    Information($"Copied nupkg to {outputDir}");
     CopyFiles(nugetFiles, outputDir);
 });
 
