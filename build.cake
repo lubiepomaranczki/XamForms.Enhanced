@@ -4,7 +4,7 @@
 #addin nuget:?package=Cake.Plist&version=0.5.0
 #addin nuget:?package=Cake.Git&version=0.19.0
 
-var sln = new FilePath("./XamForms.Enhanced.sln");
+var sln = new FilePath("XamForms.Enhanced.sln");
 var iOSProj = new FilePath("./iOS/XamForms.Enhanced.iOS.csproj");
 var droidProj = new FilePath("./Droid/XamForms.Enhanced.Droid.csproj");
 var coreProj = new FilePath("./XamForms.Enhanced.Abstractions/XamForms.Enhanced.csproj");
@@ -16,6 +16,7 @@ var verbosity = Verbosity.Minimal;
 var outputDirArgument = Argument("outputDir", "./artifacts");
 var outputDir = new DirectoryPath(outputDirArgument);
 var gitVersionLog = new FilePath("./gitversion.log");
+var nugetPackagesDir = new DirectoryPath("./nuget/packages");
 
 // Azure DevOps release note args
 var azureDevOpsApiKey = Argument("azureDevOpsApiKey", "");
@@ -38,7 +39,7 @@ Setup(context =>
         versionInfo.BuildMetaData,
         configuration,
         target,
-        cakeVersion);
+        cakeVersion);   
 
     verbosity = Verbosity.Normal; //(Verbosity) Enum.Parse(typeof(Verbosity), verbosityArg, true);
 });
@@ -48,13 +49,12 @@ Task("Clean")
 {    
     CleanDirectories("./**/bin");
     CleanDirectories("./**/obj");
-    
+    CleanDirectories(nugetPackagesDir.FullPath);    
     CleanDirectory(outputDir.FullPath);
 
     EnsureDirectoryExists(outputDir);
 
     MoveFileToDirectory(gitVersionLog, outputDir);
-
 });
 
 Task("CleanUntracked")
@@ -71,6 +71,8 @@ Task("ResolveBuildTools")
     .WithCriteria(() => IsRunningOnWindows())
     .Does(() =>
 {
+    Information("ResolveBuildTools");
+
     var vsWhereSettings = new VSWhereLatestSettings
     {
         IncludePrerelease = prereleaseTools,
@@ -90,9 +92,11 @@ Task("RestorePackages")
     .IsDependentOn("ResolveBuildTools")
     .Does(() =>
 {
-    var settings = GetDefaultBuildSettings()
-        .WithTarget("Restore");
-    MSBuild(sln, settings);
+    NuGetRestore(sln, new NuGetRestoreSettings { NoCache = true });
+
+    // var settings = GetDefaultBuildSettings()
+    //     .WithTarget("Restore");
+    // MSBuild(sln, settings);
 });
 
 Task("BuildAndroid")
@@ -144,13 +148,13 @@ Task("Build")
 
 Task("NugetPack")
     .IsDependentOn("Build")
-    .IsDependentOn("BuildiOS")
     .IsDependentOn("BuildAndroid")    
+    .IsDependentOn("BuildiOS")    
     .IsDependentOn("CopyPackages")
     .Does(() =>
 {
     NuGetPack("./XamForms.Enhanced.nuspec", new NuGetPackSettings{
-            Version = versionInfo.SemVer, 
+            Version = $"{versionInfo.MajorMinorPatch}-{versionInfo.PreReleaseLabel}", 
             Description = "TBD", 
             Verbosity = NuGetVerbosity.Detailed,
         });
@@ -160,17 +164,17 @@ Task("CopyPackages")
     .IsDependentOn("Build")
     .Does(() => 
 {
-    var nugetFiles = GetFiles("./*/**/bin/" + configuration + "/**/*.nupkg");
+    var nugetFiles = GetFiles("./*.nupkg");
     CopyFiles(nugetFiles, outputDir);
 });
 
 Task("Default")
     .IsDependentOn("Build")
-    .IsDependentOn("BuildiOS")
     .IsDependentOn("BuildAndroid")
+    .IsDependentOn("BuildiOS")
     .IsDependentOn("NugetPack")
-    .IsDependentOn("CopyPackages");
-    
+    .IsDependentOn("CopyPackages")
+    .Does(() => {});
 
 RunTarget(target);
 

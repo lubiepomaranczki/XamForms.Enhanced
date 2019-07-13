@@ -3,7 +3,7 @@ branches:
     regex: master
     mode: ContinuousDelivery
     tag: ''
-    increment: Patch
+    increment: Minor
   release:
     regex: releases?[/-]
     mode: ContinuousDelivery
@@ -12,9 +12,9 @@ branches:
   feature:
     regex: features?[/-]
     mode: ContinuousDeployment    
-    increment: Minor
+    increment: Patch
   develop:
     regex: dev(elop)?(ment)?$
     mode: ContinuousDeployment
     tag: alpha
-    increment: Minor
+    increment: Patch
