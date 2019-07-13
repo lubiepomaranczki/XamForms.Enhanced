@@ -38,7 +38,7 @@ Setup(context =>
         versionInfo.BuildMetaData,
         configuration,
         target,
-        cakeVersion);
+        cakeVersion);   
 
     verbosity = Verbosity.Normal; //(Verbosity) Enum.Parse(typeof(Verbosity), verbosityArg, true);
 });
@@ -134,8 +134,8 @@ Task("Build")
     .Does(() =>
 {
     var settings = GetDefaultBuildSettings()
-        .WithProperty("Version", versionInfo.SemVer)
-        .WithProperty("PackageVersion", versionInfo.SemVer)
+        .WithProperty("Version", versionInfo.NuGetVersion)
+        .WithProperty("PackageVersion", versionInfo.NuGetVersion)
         .WithProperty("InformationalVersion", versionInfo.InformationalVersion)
         .WithTarget("Build");
 
@@ -144,13 +144,13 @@ Task("Build")
 
 Task("NugetPack")
     .IsDependentOn("Build")
-    .IsDependentOn("BuildiOS")
     .IsDependentOn("BuildAndroid")    
+    .IsDependentOn("BuildiOS")    
     .IsDependentOn("CopyPackages")
     .Does(() =>
 {
     NuGetPack("./XamForms.Enhanced.nuspec", new NuGetPackSettings{
-            Version = versionInfo.SemVer, 
+            Version = $"{versionInfo.MajorMinorPatch}-{versionInfo.PreReleaseLabel}", 
             Description = "TBD", 
             Verbosity = NuGetVerbosity.Detailed,
         });
@@ -160,7 +160,7 @@ Task("CopyPackages")
     .IsDependentOn("Build")
     .Does(() => 
 {
-    var nugetFiles = GetFiles("./*/**/bin/" + configuration + "/**/*.nupkg");
+    var nugetFiles = GetFiles("./*.nupkg");
     CopyFiles(nugetFiles, outputDir);
 });
 
