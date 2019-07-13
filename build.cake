@@ -25,6 +25,8 @@ GitVersion versionInfo = null;
 
 Setup(context =>
 {
+    EnsureDirectoryExists(outputDir);
+
     versionInfo = context.GitVersion(new GitVersionSettings {
         UpdateAssemblyInfo = true,
         OutputType = GitVersionOutput.Json,
@@ -164,21 +166,11 @@ Task("NugetPack")
         });
 });
 
-Task("CopyPackages")
-    .IsDependentOn("Build")
-    .Does(() => 
-{
-    var nugetFiles = GetFiles("./*.nupkg");
-    var gitVersionLog = new FilePath("./gitversion.log");
-    CopyFiles(nugetFiles, outputDir);
-});
-
 Task("Default")
     .IsDependentOn("Build")
     .IsDependentOn("BuildAndroid")
     .IsDependentOn("BuildiOS")
     .IsDependentOn("NugetPack")
-    .IsDependentOn("CopyPackages")
     .Does(() => {});
 
 RunTarget(target);
