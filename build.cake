@@ -166,22 +166,11 @@ Task("NugetPack")
         });
 });
 
-Task("CopyPackages")
-    .IsDependentOn("Build")
-    .Does(() => 
-{
-    var nugetFiles = GetFiles("./*.nupkg");
-
-    Information($"Copied nupkg to {outputDir}");
-    CopyFiles(nugetFiles, outputDir);
-});
-
 Task("Default")
     .IsDependentOn("Build")
     .IsDependentOn("BuildAndroid")
     .IsDependentOn("BuildiOS")
     .IsDependentOn("NugetPack")
-    .IsDependentOn("CopyPackages")
     .Does(() => {});
 
 RunTarget(target);

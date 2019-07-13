@@ -10,15 +10,14 @@ steps:
     arguments: '--target=$(target) --configuration=$(configuration) --outputDirArgument=$(Build.ArtifactStagingDirectory)'
     failOnStderr: true
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(build.sourcesdirectory)'
+    Contents: '*.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
 - task: PublishBuildArtifacts@1
   inputs:
-    SourceFolder: 'artifacts'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-
-- task: CmdLine@2
-  inputs:
-    script: 'cd artifacts'
-
-- task: CmdLine@2
-  inputs:
-    script: 'ls'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: 'artifacts'
+    publishLocation: 'Container'
