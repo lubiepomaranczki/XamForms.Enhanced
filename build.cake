@@ -98,7 +98,7 @@ Task("BuildAndroid")
     .IsDependentOn("Clean")
     .IsDependentOn("ResolveBuildTools")
     .IsDependentOn("RestorePackages")
-    .IsDependentOn("BuildCore")
+    .IsDependentOn("Build")
     .Does(() =>
 {  
     var settings = GetDefaultBuildSettings()
@@ -114,7 +114,7 @@ Task("BuildiOS")
     .IsDependentOn("Clean")
     .IsDependentOn("ResolveBuildTools")
     .IsDependentOn("RestorePackages")
-    .IsDependentOn("BuildCore")
+    .IsDependentOn("Build")
     .Does(() =>
 {
     var settings = GetDefaultBuildSettings()
@@ -126,7 +126,7 @@ Task("BuildiOS")
     MSBuild(iOSProj, settings);
 });
 
-Task("BuildCore")
+Task("Build")
     .IsDependentOn("Clean")
     .IsDependentOn("ResolveBuildTools")
     .IsDependentOn("RestorePackages")
