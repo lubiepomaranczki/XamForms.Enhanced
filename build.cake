@@ -4,7 +4,7 @@
 #addin nuget:?package=Cake.Plist&version=0.5.0
 #addin nuget:?package=Cake.Git&version=0.19.0
 
-var sln = new FilePath("./XamForms.Enhanced.sln");
+var sln = new FilePath("XamForms.Enhanced.sln");
 var iOSProj = new FilePath("./iOS/XamForms.Enhanced.iOS.csproj");
 var droidProj = new FilePath("./Droid/XamForms.Enhanced.Droid.csproj");
 var coreProj = new FilePath("./XamForms.Enhanced.Abstractions/XamForms.Enhanced.csproj");
@@ -71,6 +71,8 @@ Task("ResolveBuildTools")
     .WithCriteria(() => IsRunningOnWindows())
     .Does(() =>
 {
+    Information("ResolveBuildTools");
+
     var vsWhereSettings = new VSWhereLatestSettings
     {
         IncludePrerelease = prereleaseTools,
@@ -90,9 +92,11 @@ Task("RestorePackages")
     .IsDependentOn("ResolveBuildTools")
     .Does(() =>
 {
-    var settings = GetDefaultBuildSettings()
-        .WithTarget("Restore");
-    MSBuild(sln, settings);
+    NuGetRestore(sln, new NuGetRestoreSettings { NoCache = true });
+
+    // var settings = GetDefaultBuildSettings()
+    //     .WithTarget("Restore");
+    // MSBuild(sln, settings);
 });
 
 Task("BuildAndroid")
@@ -169,8 +173,8 @@ Task("Default")
     .IsDependentOn("BuildAndroid")
     .IsDependentOn("BuildiOS")
     .IsDependentOn("NugetPack")
-    .IsDependentOn("CopyPackages");
-    
+    .IsDependentOn("CopyPackages")
+    .Does(() => {});
 
 RunTarget(target);
 
