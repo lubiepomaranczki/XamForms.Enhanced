@@ -12,13 +12,12 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    SourceFolder: '$(build.sourcesdirectory)/artifacts'
-    Contents: '*.nupkg'
+    SourceFolder: '/artifacts'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: CmdLine@2
   inputs:
-    script: 'artifacts'
+    script: 'cd artifacts'
 
 - task: CmdLine@2
   inputs:
