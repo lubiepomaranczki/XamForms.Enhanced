@@ -41,3 +41,5 @@ Thumbs.db
 *.nupkg
 .vs
 .idea/.idea.XamForms.Enhanced/.idea
+tools
+artifacts
