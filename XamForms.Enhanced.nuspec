@@ -11,7 +11,7 @@
        <iconUrl>https://raw.githubusercontent.com/lubiepomaranczki/XamForms.Enhanced/master/icon.png</iconUrl>
        <requireLicenseAcceptance>false</requireLicenseAcceptance>
        <description>
-	   Version 2.2.3-beta or above Built against: 3.6.0.344457
+	      Version 2.2.3-beta or above Built against: 3.6.0.344457
        </description>
        <summary>XamForms.Enhanced is my set of custom properties/other things which I use across most of my projects</summary>
        <tags>xamarin, pcl, xam.pcl, android, xamarin.forms, ios, MVVM, controls</tags>
@@ -24,7 +24,7 @@
    </metadata>
    <files>
      <!--Net Standard-->
-     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard2.0/XamForms.Enhanced.dll" target="lib/netstandard1.4/XamForms.Enhanced.dll" />
+     <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard2.0/XamForms.Enhanced.dll" target="lib/netstandard2.0/XamForms.Enhanced.dll" />
      	 
      <!--Xamarin.Android-->
      <file src="XamForms.Enhanced.Abstractions/bin/Release/netstandard2.0/XamForms.Enhanced.dll" target="lib/MonoAndroid70/XamForms.Enhanced.dll" />
