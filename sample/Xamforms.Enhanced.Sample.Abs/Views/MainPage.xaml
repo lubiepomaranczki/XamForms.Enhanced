@@ -5,7 +5,7 @@
              xmlns:views="clr-namespace:XamForms.Enhanced.Views;assembly=XamForms.Enhanced"
              x:Class="Xamforms.Enhanced.Sample.Views.MainPage"
              Title="MainPage">
-    <ContentPage.Content>
+    <ContentPage.Content>        
         <views:ExtendedListView 
             ItemsSource="{Binding Pages}" 
             IsRefreshing="{Binding IsBusy}"
@@ -13,13 +13,16 @@
             ShouldHiglightSelected="false"
             HasUnevenRows="false" 
             SeparatorVisibility="Default">
+            <ListView.Footer>
+                <Label Text="{Binding AppVersion}" HorizontalOptions="Center"/>
+            </ListView.Footer>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <Label Text="{Binding DisplayName}" TextColor="#000000" VerticalOptions="Center" Margin="16,16"/>  
                     </ViewCell>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </views:ExtendedListView>
+            </ListView.ItemTemplate>            
+        </views:ExtendedListView>        
     </ContentPage.Content>
 </ContentPage>

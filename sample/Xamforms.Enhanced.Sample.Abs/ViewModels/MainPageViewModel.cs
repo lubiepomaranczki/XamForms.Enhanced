@@ -3,17 +3,22 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Xamforms.Enhanced.Sample.Models;
 using Xamforms.Enhanced.Sample.Views;
+using XamForms.Enhanced.Providers;
 using XamForms.Enhanced.ViewModels;
 
 namespace Xamforms.Enhanced.Sample.ViewModels
 {
     public class MainPageViewModel : BaseViewModel
     {
+        private readonly IAppInfoProvider appInfoProvider;
+
         public INavigation Navigation { private get; set; }
+
+        public string AppVersion => appInfoProvider.AppInfo.ToString();
 
         public MainPageViewModel()
         {
-                
+            appInfoProvider = DependencyService.Resolve<IAppInfoProvider>();
         }
         
         public ObservableCollection<PageItem> Pages => new ObservableCollection<PageItem>

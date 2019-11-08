@@ -12,9 +12,10 @@
     <Folder Include="Views\" />
     <Folder Include="Observable\" />
     <Folder Include="Events\" />
+    <Folder Include="Providers\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.947036" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\DynamicStackLayout.cs" />

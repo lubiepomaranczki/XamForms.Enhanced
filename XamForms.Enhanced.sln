@@ -52,7 +52,6 @@ Global
 		{DE06395D-0914-4974-A48B-4725C65E619E}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{DE06395D-0914-4974-A48B-4725C65E619E}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{B7A1586C-316E-4999-9D18-C88F0537E2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B7A1586C-316E-4999-9D18-C88F0537E2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A1586C-316E-4999-9D18-C88F0537E2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A1586C-316E-4999-9D18-C88F0537E2E7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B7A1586C-316E-4999-9D18-C88F0537E2E7}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
@@ -85,6 +84,7 @@ Global
 		{D66F89AF-2ED5-467E-BC4F-C35BA2B16A54}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{D66F89AF-2ED5-467E-BC4F-C35BA2B16A54}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{D66F89AF-2ED5-467E-BC4F-C35BA2B16A54}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{D66F89AF-2ED5-467E-BC4F-C35BA2B16A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E4DA0C3-E6FB-46D5-B8ED-571519BDEA20}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{8E4DA0C3-E6FB-46D5-B8ED-571519BDEA20}.Release|Any CPU.ActiveCfg = Release|iPhone
 		{8E4DA0C3-E6FB-46D5-B8ED-571519BDEA20}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -95,6 +95,7 @@ Global
 		{8E4DA0C3-E6FB-46D5-B8ED-571519BDEA20}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{8E4DA0C3-E6FB-46D5-B8ED-571519BDEA20}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{8E4DA0C3-E6FB-46D5-B8ED-571519BDEA20}.Debug|iPhone.Build.0 = Debug|iPhone
+		{8E4DA0C3-E6FB-46D5-B8ED-571519BDEA20}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{D06416BB-5CD7-4078-8598-EDB1EBB14B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D06416BB-5CD7-4078-8598-EDB1EBB14B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D06416BB-5CD7-4078-8598-EDB1EBB14B96}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
@@ -105,6 +106,7 @@ Global
 		{D06416BB-5CD7-4078-8598-EDB1EBB14B96}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{D06416BB-5CD7-4078-8598-EDB1EBB14B96}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{D06416BB-5CD7-4078-8598-EDB1EBB14B96}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{D06416BB-5CD7-4078-8598-EDB1EBB14B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D66F89AF-2ED5-467E-BC4F-C35BA2B16A54} = {575AD4E0-274A-4AEC-9C53-2E51B7D49596}
