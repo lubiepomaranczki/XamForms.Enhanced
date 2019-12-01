@@ -29,7 +29,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.947036" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\XamForms.Enhanced.Abstractions\XamForms.Enhanced.csproj" />
