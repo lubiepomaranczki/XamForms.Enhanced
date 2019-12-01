@@ -12,6 +12,7 @@
     <Folder Include="Views\" />
     <Folder Include="Observable\" />
     <Folder Include="Events\" />
+    <Folder Include="Providers\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.3.0.947036" />
