@@ -26,6 +26,7 @@ namespace Xamforms.Enhanced.Sample.ViewModels
             new PageItem("Gradient View", typeof(SampleGradientPage)),
             new PageItem("Extended Frame", typeof(SampleExtendedFramePage)),
             new PageItem("Content View", typeof(SampleContentPage)),
+            new PageItem("ImageLoader", typeof(SampleImageLoader)),
         };
         
         public  ICommand PageSelectedCmd => new Command<PageItem>(async (page) =>
@@ -41,6 +42,10 @@ namespace Xamforms.Enhanced.Sample.ViewModels
             if (page.PageType == typeof(SampleExtendedFramePage))
             {
                 await Navigation.PushAsync(new SampleExtendedFramePage());
+            }
+            if (page.PageType == typeof(SampleImageLoader))
+            {
+                await Navigation.PushAsync(new SampleImageLoader());
             }
         });
     }
